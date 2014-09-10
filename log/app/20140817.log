@@ -1,0 +1,14 @@
+2014-08-17 02:54:15	F:\work\dev\lap_dev\lavender\WebPage.php(190)	1301	View not found:login/logout
+#0 F:\work\dev\lap_dev\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 F:\work\dev\lap_dev\lavender\WebPage.php(82): Lavender\WebPage->execute('logout')
+#2 F:\work\dev\lap_dev\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-08-17 20:20:53	F:\work\dev\lap_dev\lavender\Db\Mysql.php(96)	1401	execute sql failed,error:Unknown column 'start_create_time' in 'where clause',sql:[SELECT COUNT(*) FROM market_feedback WHERE `create_user_id`='155' AND `start_create_time`='2014-08-13' AND `end_create_time`='2014-08-22' AND `project_id`='90' AND `status`='101' AND `market_type`='1' AND `target_user_id`='262']
+#0 F:\work\dev\lap_dev\lavender\Db\Mysql.php(210): Lavender\Db\Mysql->execute('SELECT COUNT(*)...')
+#1 F:\work\dev\lap_dev\lavender\Dao\Table.php(293): Lavender\Db\Mysql->count('market_feedback', '`create_user_id...')
+#2 F:\work\dev\lap_dev\app\Api\MarketFeedback.php(41): Lavender\Dao\Table->count(NULL, Array)
+#3 F:\work\dev\lap_dev\app\Action\feedback.php(712): App\Api\MarketFeedback::count(NULL, Array)
+#4 F:\work\dev\lap_dev\lavender\WebPage.php(132): App\Action\feedback->bug_need_check_action()
+#5 F:\work\dev\lap_dev\lavender\WebPage.php(82): Lavender\WebPage->execute('bug_need_check')
+#6 F:\work\dev\lap_dev\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#7 {main}

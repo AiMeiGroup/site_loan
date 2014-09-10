@@ -1,0 +1,44 @@
+2014-07-21 16:40:11	E:\work\dev\lap_dev\lavender\WebPage.php(190)	1301	View not found:login/logout
+#0 E:\work\dev\lap_dev\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 E:\work\dev\lap_dev\lavender\WebPage.php(82): Lavender\WebPage->execute('logout')
+#2 E:\work\dev\lap_dev\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-07-21 17:04:55	E:\work\dev\lap_dev\lavender\WebPage.php(190)	1301	View not found:login/logout
+#0 E:\work\dev\lap_dev\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 E:\work\dev\lap_dev\lavender\WebPage.php(82): Lavender\WebPage->execute('logout')
+#2 E:\work\dev\lap_dev\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-07-21 17:04:56	E:\work\dev\lap_dev\lavender\Session.php(131)	1211	session record not found on server.
+#0 E:\work\dev\lap_dev\lavender\Session.php(35): Lavender\Session->init()
+#1 E:\work\dev\lap_dev\lavender\WebPage.php(126): Lavender\Session->is_valid()
+#2 E:\work\dev\lap_dev\lavender\WebPage.php(82): Lavender\WebPage->execute('list_version_se...')
+#3 E:\work\dev\lap_dev\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-07-21 17:04:56	E:\work\dev\lap_dev\lavender\Session.php(131)	1211	session record not found on server.
+#0 E:\work\dev\lap_dev\lavender\Session.php(35): Lavender\Session->init()
+#1 E:\work\dev\lap_dev\lavender\WebPage.php(126): Lavender\Session->is_valid()
+#2 E:\work\dev\lap_dev\lavender\WebPage.php(82): Lavender\WebPage->execute('list_project_by...')
+#3 E:\work\dev\lap_dev\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-07-21 17:07:53	E:\work\dev\lap_dev\lavender\WebPage.php(190)	1301	View not found:login/logout
+#0 E:\work\dev\lap_dev\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 E:\work\dev\lap_dev\lavender\WebPage.php(82): Lavender\WebPage->execute('logout')
+#2 E:\work\dev\lap_dev\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-07-21 17:14:14	E:\work\dev\lap_dev\lavender\WebPage.php(190)	1301	View not found:login/logout
+#0 E:\work\dev\lap_dev\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 E:\work\dev\lap_dev\lavender\WebPage.php(82): Lavender\WebPage->execute('logout')
+#2 E:\work\dev\lap_dev\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-07-21 17:14:15	E:\work\dev\lap_dev\lavender\Session.php(131)	1211	session record not found on server.
+#0 E:\work\dev\lap_dev\lavender\Session.php(35): Lavender\Session->init()
+#1 E:\work\dev\lap_dev\lavender\WebPage.php(126): Lavender\Session->is_valid()
+#2 E:\work\dev\lap_dev\lavender\WebPage.php(82): Lavender\WebPage->execute('list_project_by...')
+#3 E:\work\dev\lap_dev\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-07-21 17:14:15	E:\work\dev\lap_dev\lavender\Session.php(131)	1211	session record not found on server.
+#0 E:\work\dev\lap_dev\lavender\Session.php(35): Lavender\Session->init()
+#1 E:\work\dev\lap_dev\lavender\WebPage.php(126): Lavender\Session->is_valid()
+#2 E:\work\dev\lap_dev\lavender\WebPage.php(82): Lavender\WebPage->execute('list_version_se...')
+#3 E:\work\dev\lap_dev\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}

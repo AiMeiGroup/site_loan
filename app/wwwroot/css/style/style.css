@@ -1,0 +1,156 @@
+@charset "utf-8";
+@import url("layout.css");
+body{
+    background-color:#fff;
+}
+/*左栏*/
+/*.content{ background-color:#f9f9f9;}*/
+/*.col_sub{ width:200px; background-color:#f9f9f9; margin-right:-5px; float:left;}*/
+/*.meun_list{ border-top:1px solid #136c8f;}*/
+/*.meun_list h3{ height:35px; border-bottom:1px solid #136c8f; font:bold 14px/35px arial; text-indent:28px;}*/
+/*.meun_list h3 a{ background-position: 0 -126px; display:block; color:#fff; width:200px;}*/
+/*.meun_list h3 a:hover{ background-position: 0 -162px; color:#fff;}*/
+/*.meun_list .sub_list li{ background:url(img/sublist_line.png) 0 bottom repeat-x; height:34px; line-height:32px;}*/
+/*.meun_list .sub_list li a{ background:url(img/ico_list.png) 45px 12px no-repeat; display:block; padding-left:60px; width:140px;}*/
+/*.meun_list .sub_list li a:hover{ background-color:#d3eaf4;}*/
+
+/*右栏*/
+.col_main{ border-left:1px solid #cdcdcd;min-height:600px; height:auto !important; height:600px; overflow:visible; background-color:#fff; padding:20px 30px;}
+.top_tool{ height:30px; line-height:30px;}
+.btn_create{ background-position: 0 -292px; height:26px; line-height:26px; display:inline-block; padding:0 10px; border:1px solid #cacaca; border-radius:4px; cursor:pointer; margin-right:5px;}
+.btn_create:hover{ background-position:0 -319px; color:#333;}
+.col_main .table{ padding:30px 0;}
+.info_tab{ border:1px solid #dbdbdb;}
+.info_tab th{ font-weight:normal; background-position:0 -198px; height:32px; border-bottom:1px solid #dbdbdb;}
+.info_tab td{ border:1px solid #dbdbdb; text-align:center; padding:10px 5px;}
+.info_tab td a{ color:#06c;}
+.info_tab td.operate a{ padding:0 5px;cursor: pointer;}
+.info_tab a:hover{ text-decoration:underline;}
+.info_tab td.tl{ text-align:left; padding-left:12px;}
+
+/*创建需求*/
+.top_tool .filter{ margin-left:50px;}
+.top_tool .filter a{ margin-right:10px;}
+.top_tool .filter a em{ color:#06c; font-weight:bold;}
+.top_tool select{ float:right; width:160px;}
+.require_create{ padding:10px 20px;}
+.require_create h2{ font-size:15px;}
+.require_create h2 .fr{ font-size:12px; font-weight:normal; margin-right:20px;}
+.require_create .form_list{ padding:20px 30px;}
+.require_create .form_list li.inline{ display:inline-block; width:440px; *display:inline; *zoom:1;}
+.require_create .form_list li.inline2{ display:inline-block; width:200px; *display:inline; *zoom:1;}
+/*需求处理*/
+.require_detail .detail{ border:1px solid #ececec; position:relative; padding:10px; line-height:22px;}
+.require_detail .detail .form_list li{ padding:2px 0;}
+.require_detail .detail .form_list .tit{ font-weight:bold;}
+.require_detail .detail .status{ margin-left:30px; font-family:simsun;}
+.require_detail .detail .operate{ position:absolute; top:15px; right:20px; _right:50px;}
+.require_detail .detail .operate p{margin-bottom:5px;}
+.require_detail .other{ padding:10px 20px;}
+.require_detail .other h3{ font-size:12px; padding-bottom:10px;}
+.require_detail .other p{ padding-bottom:10px;}
+.require_detail .other .from{ margin-right:50px;}
+.require_detail .other li{ padding:10px 0 5px 10px; border-bottom:1px dashed #cdcdcd;}
+.require_detail .detail .form_list li{ padding:2px 0; clear:both;}
+.require_detail .detail .form_list li div{ display:inline-block; width:70%;}
+.require_detail .form_list li.inline{ display:inline-block; width:420px; *display:inline; *zoom:1;}
+
+
+/*个人资料*/
+.user_info{ padding:10px 20px;}
+.user_info h2{ font-size:15px;}
+.user_info .info{ padding:20px;}
+.user_info .info p{ padding:10px 0;}
+.user_info .info .name{ font-size:14px;}
+.user_info .info .base{ border:1px solid #ececec; padding:15px; position:relative;}
+.user_info .base h3{ font-size:12px; padding-bottom:5px;}
+.user_info .base .alter_info{ position:absolute; top:5px; right:15px; _right:85px;}
+.page{
+    float:left;
+    background:#FBFAF8;
+    border:1px solid #d4d4d4;
+    padding:5px;
+    width:99%;
+    margin:5px 0px;
+    text-align:right
+}
+.page a:hover, .page .current {
+    color:red;
+}
+
+/**/
+.copy_image {
+    background-image: url(img/copy.png);
+    cursor:hand;
+    height: 16px;
+    width: 16px;
+    caption:"test";
+}
+
+
+/***查询表格样式**/
+.search_table{
+    border:1px solid #dbdbdb;
+    color:#666;
+}
+.search_table th {
+    background-repeat:repeat-x;
+    height:30px;
+}
+.search_table td,table th{
+    border:1px solid #dbdbdb;
+    padding:0 1em 0;
+     height: 30px;
+}
+.search_table tr.tr_css{
+    background-color:#dbdbdb;
+}
+.search_table select{ width:120px; margin-right:10px; border:1px solid #ccc; background-color:#fff;}
+
+.search_table input{  padding:3px; height:14px; line-height:14px; vertical-align:middle; margin-right:5px; border:1px solid #ccc; background-color:#fff;}
+
+/**评论*/
+#commentform_title {
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    padding: 0 0 0 25px;
+}
+div.commentform input.author, div.commentform input.email, div.commentform input.url {
+    background-repeat: no-repeat;
+    border: 1px solid #CCCCCC;
+    font-size: 13px;
+    padding: 4px 4px 4px 30px;
+    width: 300px;
+}
+div.commentform input.author {
+    background-position: 3px -3px;
+}
+div.commentform input.email {
+    background-position: 3px -33px;
+}
+div.commentform input.url {
+    background-position: 3px -63px;
+}
+
+div.commentform textarea.comment_textarea {
+    line-height: 1.6;
+}
+div.commentform textarea {
+    font-size: 13px;
+    height: 150px;
+    width: 450px;
+}
+div.commentform p {
+    line-height: 20px;
+    margin-top: 10px;
+}
+.commentbox_title {
+    width: 450px;
+}
+.commentbox_title_left {
+    float: left;
+}
+.commentbox_title_right {
+    float: right;
+    height: 22px;
+}
