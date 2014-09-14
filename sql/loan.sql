@@ -16,6 +16,168 @@ USE `loan`;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
+/*Table structure for table `action` */
+
+DROP TABLE IF EXISTS `action`;
+
+CREATE TABLE `action` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL COMMENT '功能名称',
+  `remark` varchar(255) DEFAULT NULL,
+  `created_on` datetime NOT NULL COMMENT '创建日期',
+  `modified_on` datetime NOT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+/*Data for the table `action` */
+
+insert  into `action`(`id`,`name`,`remark`,`created_on`,`modified_on`) values (1,'home.index','访问首页','2013-09-24 20:27:05','2013-09-24 20:27:05');
+
+/*Table structure for table `borrow` */
+
+DROP TABLE IF EXISTS `borrow`;
+
+CREATE TABLE `borrow` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  `type` int(11) NOT NULL COMMENT '借款种类：1：普通标，2：担保标，3：秒还标，4：净值标，5：抵押标',
+  `title` varchar(255) NOT NULL COMMENT '标题',
+  `amount` varchar(255) DEFAULT NULL COMMENT '借款金额',
+  `mode` varchar(255) DEFAULT NULL COMMENT '还款方式：1：按天到期还款，2：按月分期还款，3按季分期还款，4：每月还息到期还本',
+  `period` varchar(255) DEFAULT NULL COMMENT '借款期限：1:30天内，2:1个月，3:1-3个月，4:6-12个月，5:12个月以上',
+  `closing_cost` varchar(255) DEFAULT NULL COMMENT '借款手续费',
+  `fundraising_days` int(11) DEFAULT NULL COMMENT '筹款天数',
+  `status` int(11) DEFAULT NULL COMMENT '状态：1:未审核，2：审核通过，3：审核不通过',
+  `remark` varchar(255) DEFAULT NULL COMMENT '备注信息',
+  `start_time` datetime NOT NULL COMMENT '开始时间',
+  `end_time` datetime NOT NULL COMMENT '结束时间',
+  `created_on` datetime NOT NULL COMMENT '创建日期',
+  `modified_on` datetime NOT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `borrow` */
+
+/*Table structure for table `company` */
+
+DROP TABLE IF EXISTS `company`;
+
+CREATE TABLE `company` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  `name` varchar(255) NOT NULL COMMENT '公司名称',
+  `type` int(11) DEFAULT NULL COMMENT '公司性质:1:政府机关,2:国有企业,3:国内私营企业，4:台(港,澳)资企业,5:外资企业,6:合资企业,7:个体户,8:事业性单位',
+  `industry` int(11) DEFAULT NULL COMMENT '公司行业:1:农、林、牧、渔业,2:制造业,3:电力、燃气及水的生产和供应业,4:建筑业,5:交通运输、仓储和邮政业,6:信息传输、计算机服务和软件业,7:批发和零售业,8:金融业,9:房地产业,10:采矿业,11:租赁和商务服务业,12:科学研究、技术服务和地质勘查业,13:水利、环境和公共设施管理业,14:居民服务和其他服务业,15:教育,16:卫生、社会保障和社会福利业,17:文化、体育和娱乐业,18:公共管理和社会组织,19:国际组织',
+  `grade` int(11) DEFAULT NULL COMMENT '工作级别:0:请选择,1:普通员工,2:管理人员,3:股东,4:私营业主',
+  `position` int(11) DEFAULT NULL COMMENT '职位：',
+  `start_time` datetime DEFAULT NULL COMMENT '服务开始时间',
+  `end_time` datetime DEFAULT NULL COMMENT '服务结束时间',
+  `work_life` int(11) DEFAULT NULL COMMENT '工作年限:0:一年以内,1:一年以上,2:二年以上,3:三年以上,4:四年以上,5:五年以上,6:六年以上',
+  `telephone` varchar(255) DEFAULT NULL COMMENT '工作电话',
+  `address` varchar(255) DEFAULT NULL COMMENT '公司地址',
+  `website` varchar(255) DEFAULT NULL COMMENT '公司网站',
+  `remark` varchar(500) DEFAULT NULL COMMENT '备注说明',
+  `created_on` datetime NOT NULL COMMENT '创建日期',
+  `modified_on` datetime NOT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `company` */
+
+/*Table structure for table `contact` */
+
+DROP TABLE IF EXISTS `contact`;
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  `telephone` varchar(500) NOT NULL COMMENT '居住电话',
+  `cellphone` int(11) NOT NULL COMMENT '手机号码',
+  `province` int(11) NOT NULL COMMENT '居住所在省市',
+  `city` int(11) NOT NULL COMMENT '居住所在市',
+  `county` int(11) DEFAULT NULL COMMENT '居住所在县城',
+  `post_code` int(11) DEFAULT NULL COMMENT '居住地邮编',
+  `address` varchar(500) DEFAULT NULL COMMENT '现居住地址',
+  `MSN` varchar(500) DEFAULT NULL COMMENT 'MSN',
+  `QQ` varchar(500) DEFAULT NULL COMMENT 'QQ',
+  `taobao` varchar(500) DEFAULT NULL COMMENT '淘宝旺旺',
+  `second_contact_name` varchar(500) DEFAULT NULL COMMENT '第二联系人姓名',
+  `second_contact_relation` int(11) DEFAULT NULL COMMENT '第二联系人关系：1:配偶,2:父亲,3:母亲,4:兄弟姐妹,5:子女',
+  `second_contatc_telephone` varchar(500) DEFAULT NULL COMMENT '第二联系人电话',
+  `second_contatc_cellphone` int(11) DEFAULT NULL COMMENT '第二联系人手机',
+  `third_contact_name` varchar(500) DEFAULT NULL COMMENT '第三联系人姓名',
+  `third_contact_relation` int(11) DEFAULT NULL COMMENT '第三联系人关系：1:配偶,2:父亲,3:母亲,4:兄弟姐妹,5:子女',
+  `third_contatc_telephone` varchar(500) DEFAULT NULL COMMENT '第三联系人电话',
+  `third_contatc_cellphone` int(11) DEFAULT NULL COMMENT '第三联系人手机',
+  `four_contact_name` varchar(500) DEFAULT NULL COMMENT '第四联系人姓名',
+  `four_contact_relation` int(11) DEFAULT NULL COMMENT '第四联系人关系：1:配偶,2:父亲,3:母亲,4:兄弟姐妹,5:子女',
+  `four_contatc_telephone` varchar(500) DEFAULT NULL COMMENT '第四联系人电话',
+  `four_contatc_cellphone` int(11) DEFAULT NULL COMMENT '第四联系人手机',
+  `created_on` datetime NOT NULL COMMENT '创建日期',
+  `modified_on` datetime NOT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `contact` */
+
+/*Table structure for table `education` */
+
+DROP TABLE IF EXISTS `education`;
+
+CREATE TABLE `education` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  `degree` int(11) NOT NULL COMMENT '最高学历',
+  `school` varchar(500) NOT NULL COMMENT '最高学历学校名称',
+  `address` varchar(500) DEFAULT NULL COMMENT '最高学历学校地址',
+  `major` varchar(500) DEFAULT NULL COMMENT '学习的专业',
+  `start_date` date NOT NULL COMMENT '开始日期',
+  `end_date` date NOT NULL COMMENT '结束日期',
+  `created_on` datetime DEFAULT NULL COMMENT '创建日期',
+  `modified_on` datetime DEFAULT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `education` */
+
+/*Table structure for table `finance` */
+
+DROP TABLE IF EXISTS `finance`;
+
+CREATE TABLE `finance` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL COMMENT '用户ID',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `finance` */
+
+/*Table structure for table `house` */
+
+DROP TABLE IF EXISTS `house`;
+
+CREATE TABLE `house` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL COMMENT '用户id',
+  `address` varchar(500) NOT NULL COMMENT '房产地址',
+  `area` varchar(255) NOT NULL COMMENT '建筑面积',
+  `year` int(11) NOT NULL COMMENT '年份',
+  `status` int(11) DEFAULT NULL COMMENT '供款状态：0:已供完房款,1:按揭中',
+  `ower_1` varchar(255) DEFAULT NULL COMMENT '所有权人1',
+  `percent_1` varchar(255) DEFAULT NULL COMMENT '产权份额1',
+  `ower_2` varchar(255) DEFAULT NULL COMMENT '所有权人2',
+  `percent_2` varchar(255) DEFAULT NULL COMMENT '产权份额2',
+  `period` varchar(255) DEFAULT NULL COMMENT '贷款年限',
+  `monthly_payment` varchar(255) DEFAULT NULL COMMENT '月供',
+  `residue` varchar(255) DEFAULT NULL COMMENT '贷款余款',
+  `bank` varchar(255) DEFAULT NULL COMMENT '贷款银行',
+  `created_on` datetime NOT NULL COMMENT '创建日期',
+  `modified_on` datetime NOT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `house` */
+
 /*Table structure for table `kv_session` */
 
 DROP TABLE IF EXISTS `kv_session`;
@@ -30,65 +192,174 @@ CREATE TABLE `kv_session` (
 
 /*Data for the table `kv_session` */
 
-insert  into `kv_session`(`id`,`data`,`flags`,`updated`) values (262,'{\"secret\":\"12182649021410363181\",\"userinfo\":{\"id\":\"262\",\"username\":\"dejian.liang\",\"name\":\"梁德坚\",\"dept_id\":\"1\",\"role_id\":\"48\",\"mobile\":\"\",\"email\":\"dejian.liang@cnlaunch.com\",\"status\":\"0\",\"create_user_id\":\"1\",\"create_time\":\"2014-03-24 20:04:40\"}}',1,1410363181);
+insert  into `kv_session`(`id`,`data`,`flags`,`updated`) values (262,'{\"secret\":\"13681133971410363771\",\"userinfo\":{\"id\":\"262\",\"username\":\"dejian.liang\",\"name\":\"梁德坚\",\"dept_id\":\"1\",\"role_id\":\"48\",\"mobile\":\"\",\"email\":\"dejian.liang@cnlaunch.com\",\"status\":\"0\",\"create_user_id\":\"1\",\"create_time\":\"2014-03-24 20:04:40\"}}',1,1410363771);
+
+/*Table structure for table `other` */
+
+DROP TABLE IF EXISTS `other`;
+
+CREATE TABLE `other` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL COMMENT '用户ID',
+  `ability` varchar(1000) DEFAULT NULL COMMENT '个人能力',
+  `hobby` varchar(1000) DEFAULT NULL COMMENT '个人爱好',
+  `remark` varchar(1000) DEFAULT NULL COMMENT '其它说明',
+  `created_on` datetime DEFAULT NULL COMMENT '创建日期',
+  `modified_on` datetime DEFAULT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `other` */
+
+/*Table structure for table `owner` */
+
+DROP TABLE IF EXISTS `owner`;
+
+CREATE TABLE `owner` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  `type` int(11) NOT NULL COMMENT '公司行业:1:农、林、牧、渔业,2:制造业,3:电力、燃气及水的生产和供应业,4:建筑业,5:交通运输、仓储和邮政业,6:信息传输、计算机服务和软件业,7:批发和零售业,8:金融业,9:房地产业,10:采矿业,11:租赁和商务服务业,12:科学研究、技术服务和地质勘查业,13:水利、环境和公共设施管理业,14:居民服务和其他服务业,15:教育,16:卫生、社会保障和社会福利业,17:文化、体育和娱乐业,18:公共管理和社会组织,19:国际组织',
+  `register_date` datetime NOT NULL COMMENT '成立日期',
+  `place` varchar(500) NOT NULL COMMENT '经营场所',
+  `rent` varchar(500) DEFAULT NULL COMMENT '租金',
+  `tenancy` int(11) DEFAULT NULL COMMENT '租期',
+  `tax_number` varchar(500) DEFAULT NULL COMMENT '税务编号',
+  `registrater_number` varchar(500) DEFAULT NULL COMMENT '工商登记号',
+  `profit_loss` varchar(500) DEFAULT NULL COMMENT '全年盈利/亏损额',
+  `emploees` int(11) DEFAULT NULL COMMENT '员工人数',
+  `created_on` datetime NOT NULL COMMENT '创建日期',
+  `modified_on` datetime NOT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `owner` */
+
+/*Table structure for table `person` */
+
+DROP TABLE IF EXISTS `person`;
+
+CREATE TABLE `person` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL COMMENT '用户id',
+  `name` varchar(255) NOT NULL COMMENT '真实姓名',
+  `id_type` varchar(255) NOT NULL COMMENT '证件类型',
+  `id_number` varchar(255) NOT NULL COMMENT '证件号码',
+  `regions` varchar(255) DEFAULT NULL COMMENT '籍贯',
+  `marriage_status` int(11) DEFAULT NULL COMMENT '婚姻情况：0：未婚 1：已婚',
+  `children` int(11) DEFAULT NULL COMMENT '子女：0：无,1:1个,2:2个,3:3个,4:4个,5:4个以上 ',
+  `education` int(11) DEFAULT NULL COMMENT '学历：1:小学,2:高中,3:大专,4:大专,5:本科,6:研究生,7:硕士,8:博士,9:博士后,10:其它,11:职专、中专',
+  `salary` int(11) DEFAULT NULL COMMENT '工资：1:1000元以下,2:1001-2000元,3:2001-3000元,4:3001-4000元,5:4001-5000元,6:5001-6000元,7:6001-7000元,8:7001-8000元,9:8001-10000元,10:10001-30000元,11:30001-50000元,12:50000元以上            ',
+  `insurance` int(11) DEFAULT NULL COMMENT '社保：0:没有,1:有',
+  `insurance_num` int(11) DEFAULT NULL COMMENT '社保电脑号',
+  `house_condition` int(11) DEFAULT NULL COMMENT '住房条件：0:租房,1:自有房子,3其它',
+  `is_buy_car` int(11) DEFAULT NULL COMMENT '是否购车：0:没有,1:有',
+  `is_overdue` int(11) DEFAULT NULL COMMENT '逾期记录：0:没有,1:有',
+  `created_on` datetime DEFAULT NULL COMMENT '创建日期',
+  `modified_on` datetime DEFAULT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `person` */
 
 /*Table structure for table `role` */
 
 DROP TABLE IF EXISTS `role`;
 
 CREATE TABLE `role` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL COMMENT '角色名称',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL COMMENT '角色名称',
   `description` varchar(255) DEFAULT NULL COMMENT '描述',
-  `create_user_id` int(11) DEFAULT NULL,
-  `create_time` datetime DEFAULT NULL,
+  `created_on` datetime NOT NULL COMMENT '创建日期',
+  `modified_on` datetime NOT NULL COMMENT '修改日期',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='角色表';
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='角色表';
 
 /*Data for the table `role` */
 
-insert  into `role`(`id`,`name`,`description`,`create_user_id`,`create_time`) values (1,'产品组','产品工程师，产品经理',1,'2013-09-24 20:24:30'),(2,'管理员组','管理员组',1,'2013-09-24 20:24:37'),(24,'总部_鹏奥达','总部_鹏奥达',9,'2014-01-14 14:31:27'),(4,'设计组','网页重构师，视觉设计师，交互设计师',1,'2013-11-12 17:25:40'),(5,'架构组','系统架构师',1,'2013-11-12 17:25:51'),(6,'平台开发组','web前端开发工程师，后台开发工程师',1,'2013-11-12 17:26:09'),(7,'应用开发组','web前端开发工程师，后台开发工程师',1,'2013-11-12 17:26:19'),(8,'GOLO客户端iOS开发组','iOS开发工程师',1,'2013-11-12 17:26:30'),(9,'GOLO客户端Android开发组','Android开发工程师',1,'2013-11-12 17:26:44'),(10,'产品测试组','实测工程师，系统测试工程师',1,'2013-11-12 17:26:55'),(11,'项目管理组','配置工程师，项目助理，项目经理',1,'2013-11-12 17:27:05'),(12,'车云网产品线','车云网产品线(其他)，不知道是哪个组的',1,'2013-12-05 16:38:43'),(13,'车云网产品线(副总监)','车云网产品线(副总监)',1,'2014-01-09 14:11:17'),(14,'车云网产品线(总监)','车云网产品线(总监)',1,'2014-01-09 14:12:01'),(15,'资料翻译组','资料编写工程师，资料翻译工程师',1,'2014-01-09 14:13:05'),(16,'行政人事组','人事行政专员',1,'2014-01-09 14:13:40'),(17,'市场组','PLS，市场经理',1,'2014-01-09 14:16:35'),(18,'运维组','数据库工程师，运维工程师',1,'2014-01-09 14:18:15'),(19,'客户定制项目组','诊断软件首席工程师，ARM工程师，硬件工程师，系统工程师，单片机工程师，诊断程序工程师',1,'2014-01-09 14:22:58'),(20,'GOLO终端项目组','C++软件工程师，诊断软件首席工程师，ARM工程师，硬件工程师，系统工程师，单片机工程师，诊断程序工程师，android开发工程师',1,'2014-01-09 14:25:27'),(21,'协议开发项目组','汽车技术工程师，诊断协议工程师',1,'2014-01-09 14:26:12'),(22,'车云客户端IOS开发组','IOS开发工程师',1,'2014-01-09 14:26:43'),(23,'车云客户端Android开发组','Android开发工程师',1,'2014-01-09 14:26:59'),(10000,'总部_PLS','总部_PLS',1,'2014-04-01 19:43:47'),(40,'总部_产品测试组','总部软件测试诊断组',1,'2014-04-25 11:42:57'),(42,'海外市场中心','海外市场中心',9,'2014-04-29 17:38:51'),(44,'总部_网络销售部','总部_网络销售部',1,'2014-05-08 16:08:21'),(46,'总部_可靠性测试组','总部_可靠性测试组',1,'2014-05-16 10:13:30'),(48,'公众号应用组','公众号平台 管理',9,'2014-05-26 10:13:20');
+insert  into `role`(`id`,`name`,`description`,`created_on`,`modified_on`) values (1,'管理员组','超级管理员','2013-09-24 20:24:37','2013-09-24 20:24:37');
 
-/*Table structure for table `sys_user_group` */
+/*Table structure for table `role_action` */
 
-DROP TABLE IF EXISTS `sys_user_group`;
+DROP TABLE IF EXISTS `role_action`;
 
-CREATE TABLE `sys_user_group` (
+CREATE TABLE `role_action` (
   `id` int(11) NOT NULL,
-  `group_name` varchar(200) NOT NULL,
-  `group_menu` varchar(1000) DEFAULT NULL,
-  `group_desc` varchar(1000) DEFAULT NULL,
+  `role_id` int(11) NOT NULL COMMENT '角色ID',
+  `action_ids` varchar(1000) DEFAULT NULL COMMENT '功能集合',
+  `created_on` datetime NOT NULL COMMENT '创建日期',
+  `modified_on` datetime NOT NULL COMMENT '修改日期',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*Data for the table `sys_user_group` */
+/*Data for the table `role_action` */
 
-insert  into `sys_user_group`(`id`,`group_name`,`group_menu`,`group_desc`) values (1,'默认组','[\"2\",\"7\",\"9\",\"3\",\"11\",\"4\",\"13\",\"5\",\"17\",\"1\",\"100\",\"102\",\"41\",\"43\",\"6\"]',''),(3,'管理员组','[\"2\",\"7\",\"9\",\"3\",\"11\",\"4\",\"13\",\"5\",\"15\",\"6\",\"17\",\"1\",\"19\",\"21\",\"100\",\"23\",\"102\",\"25\",\"27\",\"29\",\"31\",\"33\",\"35\",\"37\",\"39\",\"41\",\"43\",\"45\",\"47\",\"49\",\"51\",\"53\",\"55\",\"57\",\"59\"]',''),(5,'市场组','[\"19\",\"21\",\"23\",\"25\"]','');
+insert  into `role_action`(`id`,`role_id`,`action_ids`,`created_on`,`modified_on`) values (1,1,'[\"2\",\"7\",\"9\",\"3\",\"11\",\"4\",\"13\",\"5\",\"17\",\"1\",\"100\",\"102\",\"41\",\"43\",\"6\"]','2013-09-24 20:37:41','2013-09-24 20:37:41');
+
+/*Table structure for table `spouse` */
+
+DROP TABLE IF EXISTS `spouse`;
+
+CREATE TABLE `spouse` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  `name` varchar(500) NOT NULL COMMENT '配偶姓名',
+  `salary` varchar(500) DEFAULT NULL COMMENT '每月薪金/每月工资',
+  `cellphone` int(11) DEFAULT NULL COMMENT '移动电话',
+  `telephone` varchar(500) DEFAULT NULL COMMENT '单位电话',
+  `type` int(11) DEFAULT NULL COMMENT '公司行业:1:农、林、牧、渔业,2:制造业,3:电力、燃气及水的生产和供应业,4:建筑业,5:交通运输、仓储和邮政业,6:信息传输、计算机服务和软件业,7:批发和零售业,8:金融业,9:房地产业,10:采矿业,11:租赁和商务服务业,12:科学研究、技术服务和地质勘查业,13:水利、环境和公共设施管理业,14:居民服务和其他服务业,15:教育,16:卫生、社会保障和社会福利业,17:文化、体育和娱乐业,18:公共管理和社会组织,19:国际组织',
+  `position` int(11) DEFAULT NULL COMMENT '职位：',
+  `address` varchar(500) DEFAULT NULL COMMENT '单位地址',
+  `monthly_income` varchar(500) DEFAULT NULL COMMENT '月收入',
+  `created_on` datetime NOT NULL COMMENT '创建日期',
+  `modified_on` datetime NOT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `spouse` */
 
 /*Table structure for table `user` */
 
 DROP TABLE IF EXISTS `user`;
 
 CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL COMMENT '登陆账号',
   `password` varchar(255) NOT NULL COMMENT '密码',
   `name` varchar(20) NOT NULL COMMENT '用户名',
-  `dept_id` int(11) NOT NULL COMMENT '部门id',
   `role_id` int(11) NOT NULL COMMENT '角色id',
   `mobile` varchar(20) DEFAULT NULL COMMENT '手机号',
   `email` varchar(50) DEFAULT NULL,
-  `status` tinyint(4) DEFAULT '0' COMMENT '状态0：启用，1：禁用',
-  `create_user_id` int(11) NOT NULL COMMENT '创建者id',
-  `create_time` datetime NOT NULL COMMENT '创建时间',
-  `group_id` int(11) NOT NULL DEFAULT '1',
+  `status` tinyint(4) DEFAULT '0' COMMENT '状态0：禁用，1：启用',
+  `created_on` datetime NOT NULL COMMENT '创建日期',
+  `modified_on` datetime NOT NULL COMMENT '修改日期',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`) USING BTREE
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户表';
+) ENGINE=MyISAM AUTO_INCREMENT=731 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`username`,`password`,`name`,`dept_id`,`role_id`,`mobile`,`email`,`status`,`create_user_id`,`create_time`,`group_id`) values (1,'admin','50ee99bb70b37dfd713de32880a534bb35dd0888','超级管理员',1,2,'123','admin@cnlaunch.com',1,1,'2013-09-24 20:27:05',3),(702,'pengfei.ren','7c4a8d09ca3762af61e59520943dc26494f8941b','任鹏飞',1,44,'','pengfei.ren@cnlaunch.com',0,1,'2014-05-12 11:28:10',1),(218,'xinwu.hu','7c4a8d09ca3762af61e59520943dc26494f8941b','胡新武',1,23,'','xinwu.hu@cnlaunch.com',0,1,'2014-01-14 14:33:10',1),(5,'jiaxin.yuan','7c4a8d09ca3762af61e59520943dc26494f8941b','袁加欣',1,4,'15899677750','jiaxin.yuan@cnlaunch.com',NULL,1,'2013-09-24 20:36:51',1),(6,'yanshen.luo','7c4a8d09ca3762af61e59520943dc26494f8941b','骆沿伸',1,1,'13420913853','yanshen.luo@cnlaunch.com',NULL,1,'2013-09-24 20:37:41',1),(7,'xueying.mai','7c4a8d09ca3762af61e59520943dc26494f8941b','麦雪莹',1,4,'18128836809','xueying.mai@cnlaunch.com',NULL,1,'2013-09-24 20:38:13',1),(8,'yuxiang.wei','7c4a8d09ca3762af61e59520943dc26494f8941b','韦雨湘',1,1,'','yuxiang.wei@cnlaunch.com',NULL,1,'2013-09-24 20:38:31',1),(9,'wenyou.wan','7c4a8d09ca3762af61e59520943dc26494f8941b','万文友',1,6,'1234567890','wenyou.wan@cnlaunch.com',NULL,1,'2013-09-24 20:39:01',3),(10,'wenwen.tan','7c4a8d09ca3762af61e59520943dc26494f8941b','谭文文',1,1,'','wenwen.tan@cnlaunch.com',0,4,'2013-09-30 09:27:37',1),(12,'lianning.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张联宁',1,4,'','lianning.zhang@cnlaunch.com',0,9,'2013-10-14 17:19:44',1),(13,'haicheng.jin','7c4a8d09ca3762af61e59520943dc26494f8941b','金海诚',1,1,'','haicheng.jin@cnlaunch.com',0,1,'2013-10-30 14:38:24',1),(14,'rui.zhu','7c4a8d09ca3762af61e59520943dc26494f8941b','朱锐',1,1,'','rui.zhu@cnlaunch.com',0,1,'2013-10-30 14:39:20',1),(15,'fei.lan','7c4a8d09ca3762af61e59520943dc26494f8941b','兰飞',1,11,'','fei.lan@cnlaunch.com',0,1,'2013-10-30 14:39:39',1),(16,'shiwen.jiang','7c4a8d09ca3762af61e59520943dc26494f8941b','蒋仕文',1,14,'','shiwen.jiang@cnlaunch.com',0,1,'2013-11-01 16:24:24',1),(17,'sikai.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李思凯',1,17,'18128836952','sikai.li@cnlaunch.com',0,10,'2013-11-01 17:18:31',1),(18,'juanjuan.cai','7c4a8d09ca3762af61e59520943dc26494f8941b','蔡娟娟',1,4,'','juanjuan.cai@cnlaunch.com',0,9,'2013-11-12 19:28:53',1),(20,'qiang.lin','7c4a8d09ca3762af61e59520943dc26494f8941b','林强',1,13,'','qiang.lin@cnlaunch.com',0,9,'2013-11-12 19:30:14',1),(21,'qing.ye','7c4a8d09ca3762af61e59520943dc26494f8941b','叶青',1,6,'','qing.ye@cnlaunch.com',0,9,'2013-11-12 19:30:34',1),(22,'kui.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张奎',1,7,'','kui.zhang@cnlaunch.com',0,9,'2013-11-12 19:30:59',1),(23,'hong.zhou','7c4a8d09ca3762af61e59520943dc26494f8941b','周洪',1,48,'','hong.zhou@cnlaunch.com',0,9,'2013-11-12 19:31:20',1),(24,'jun.jiang','7c4a8d09ca3762af61e59520943dc26494f8941b','姜军',1,8,'','jun.jiang@cnlaunch.com',0,9,'2013-11-12 19:31:46',1),(25,'mei.qin','7c4a8d09ca3762af61e59520943dc26494f8941b','秦美',1,9,'','mei.qin@cnlaunch.com',0,9,'2013-11-12 19:32:05',1),(26,'zhifen.zhai','7c4a8d09ca3762af61e59520943dc26494f8941b','翟志芬',1,18,'','zhifen.zhai@cnlaunch.com',0,9,'2013-11-12 19:32:32',1),(27,'jiacui.huang','7c4a8d09ca3762af61e59520943dc26494f8941b','黄家萃',1,6,'','jiacui.huang@cnlaunch.com',0,1,'2013-11-12 19:35:41',1),(28,'bianzheng.fu','7c4a8d09ca3762af61e59520943dc26494f8941b','符边正',1,6,'','bianzheng.fu@cnlaunch.com',0,1,'2013-11-12 19:36:05',1),(29,'tao.nie','7c4a8d09ca3762af61e59520943dc26494f8941b','聂滔',1,6,'','tao.nie@cnlaunch.com',0,1,'2013-11-12 19:36:23',1),(30,'zhenqiu.wu','7c4a8d09ca3762af61e59520943dc26494f8941b','吴振球',1,6,'','zhenqiu.wu@cnlaunch.com',0,1,'2013-11-12 19:36:43',1),(31,'tiezhu.tang','7c4a8d09ca3762af61e59520943dc26494f8941b','唐铁柱',1,6,'','tiezhu.tang@cnlaunch.com',0,1,'2013-11-12 19:37:03',1),(32,'hongbo.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张鸿博',1,7,'','hongbo.zhang@cnlaunch.com',0,1,'2013-11-12 19:37:29',1),(33,'weize.yao','7c4a8d09ca3762af61e59520943dc26494f8941b','姚伟泽',1,7,'','weize.yao@cnlaunch.com',0,1,'2013-11-12 19:37:51',1),(34,'wuzhou.du','7c4a8d09ca3762af61e59520943dc26494f8941b','杜武洲',1,7,'','wuzhou.du@cnlaunch.com',0,1,'2013-11-12 19:38:27',1),(35,'dongming.zhuo','7c4a8d09ca3762af61e59520943dc26494f8941b','卓东明',1,7,'','dongming.zhuo@cnlaunch.com',0,1,'2013-11-12 19:38:52',1),(36,'hailong.lei','7c4a8d09ca3762af61e59520943dc26494f8941b','雷海龙',1,7,'','hailong.lei@cnlaunch.com',0,1,'2013-11-12 19:39:16',1),(37,'xiaolong.zhou','7c4a8d09ca3762af61e59520943dc26494f8941b','周小龙',1,7,'','xiaolong.zhou@cnlaunch.com',0,1,'2013-11-12 19:39:38',1),(40,'feng.zhao','7c4a8d09ca3762af61e59520943dc26494f8941b','赵锋',1,7,'','feng.zhao@cnlaunch.com',0,1,'2013-11-12 19:40:40',1),(41,'pingan.fan','7c4a8d09ca3762af61e59520943dc26494f8941b','樊平安',1,7,'','pingan.fan@cnlaunch.com',0,1,'2013-11-12 19:41:01',1),(42,'xiangrui.ou','7c4a8d09ca3762af61e59520943dc26494f8941b','欧祥瑞',1,7,'','xiangrui.ou@cnlaunch.com',0,1,'2013-11-12 19:41:51',1),(508,'xiangrong.ding','7c4a8d09ca3762af61e59520943dc26494f8941b','丁香蓉',1,10,'','xiangrong.ding@cnlaunch.com',0,1,'2014-04-14 15:46:36',1),(44,'lu.gao','7c4a8d09ca3762af61e59520943dc26494f8941b','高璐',1,8,'','lu.gao@cnlaunch.com',0,1,'2013-11-12 19:42:54',1),(45,'bo.yang','7c4a8d09ca3762af61e59520943dc26494f8941b','杨博',1,9,'','bo.yang@cnlaunch.com',0,1,'2013-11-12 19:43:19',1),(46,'zhipeng.yang','7c4a8d09ca3762af61e59520943dc26494f8941b','杨志朋',1,9,'','zhipeng.yang@cnlaunch.com',0,1,'2013-11-12 19:43:49',1),(47,'jiaqing.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘嘉庆',1,9,'','jiaqing.liu@cnlaunch.com',0,1,'2013-11-12 19:44:08',1),(50,'lingcong.xiao','7c4a8d09ca3762af61e59520943dc26494f8941b','肖灵聪',1,9,'','lingcong.xiao@cnlaunch.com',0,1,'2013-11-12 19:45:11',1),(51,'feng.guo','7c4a8d09ca3762af61e59520943dc26494f8941b','郭峰',1,9,'','feng.guo@cnlaunch.com',0,1,'2013-11-12 19:45:29',1),(53,'zhicheng.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李智成',1,10,'','zhicheng.li@cnlaunch.com',0,1,'2013-11-12 19:46:10',1),(54,'tianfeng.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张天峰',1,10,'','tianfeng.zhang@cnlaunch.com',0,1,'2013-11-12 19:46:26',1),(55,'li.ding','7c4a8d09ca3762af61e59520943dc26494f8941b','丁丽',1,10,'','li.ding@cnlaunch.com',0,1,'2013-11-12 19:46:44',1),(56,'xie.yang','7c4a8d09ca3762af61e59520943dc26494f8941b','阳协',1,10,'','xie.yang@cnlaunch.com',0,1,'2013-11-12 19:47:06',1),(180,'fudong.wang','7c4a8d09ca3762af61e59520943dc26494f8941b','王福东',1,8,'','fudong.wang@cnlaunch.com',0,24,'2014-01-06 16:50:10',1),(59,'yongqiang.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李永强',1,8,'','yongqiang.li@cnlaunch.com',0,1,'2013-11-25 16:38:38',1),(60,'qin.jiang','7c4a8d09ca3762af61e59520943dc26494f8941b','蒋勤',1,8,'','qin.jiang@cnlaunch.com',0,1,'2013-11-25 16:45:23',1),(61,'yun.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈运',1,8,'','yun.chen@cnlaunch.com',0,1,'2013-11-25 16:45:43',1),(62,'chuang.du','7c4a8d09ca3762af61e59520943dc26494f8941b','杜闯',1,8,'','chuang.du@cnlaunch.com',0,1,'2013-11-25 16:46:21',1),(63,'zhifeng.wei','7c4a8d09ca3762af61e59520943dc26494f8941b','危志峰',1,8,'','zhifeng.wei@cnlaunch.com',0,1,'2013-11-25 16:46:53',1),(65,'shudong.shu','7c4a8d09ca3762af61e59520943dc26494f8941b','舒东树',1,9,'','shudong.shu@cnlaunch.com',0,1,'2013-11-25 16:47:33',1),(215,'yong.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈勇',1,9,'','yong.chen@cnlaunch.com',0,1,'2014-01-14 09:41:07',1),(67,'xiangyuan.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张想远',1,9,'','xiangyuan.zhang@cnlaunch.com',0,1,'2013-11-25 16:48:13',1),(70,'xiuying.zhou','7c4a8d09ca3762af61e59520943dc26494f8941b','周秀英',1,10,'','xiuying.zhou@cnlaunch.com',0,1,'2013-12-04 11:58:54',1),(71,'ling.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李玲',1,10,'','ling.li@cnlaunch.com',0,1,'2013-12-04 11:59:14',1),(72,'lingli.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李伶俐',1,10,'','lingli.li@cnlaunch.com',0,1,'2013-12-04 12:00:08',1),(216,'yuandong.zhou','7c4a8d09ca3762af61e59520943dc26494f8941b','周远东',1,23,'','yuandong.zhou@cnlaunch.com',0,1,'2014-01-14 10:02:21',1),(74,'guihua.du','10b8c57e448345cf662283c1f2a54fc194981ab5','杜贵华',1,10,'','guihua.du@cnlaunch.com',0,1,'2013-12-04 12:00:54',1),(75,'hong.wu','7c4a8d09ca3762af61e59520943dc26494f8941b','吴洪',1,10,'','hong.wu@cnlaunch.com',0,1,'2013-12-04 12:01:13',1),(76,'qiuju.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张秋菊',1,10,'','qiuju.zhang@cnlaunch.com',0,1,'2013-12-04 12:01:40',1),(77,'qingqing.zeng','7c4a8d09ca3762af61e59520943dc26494f8941b','曾青青',1,10,'','qingqing.zeng@cnlaunch.com',0,1,'2013-12-04 12:02:06',1),(78,'bingxiang.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李炳祥',1,10,'','bingxiang.li@cnlaunch.com',0,1,'2013-12-04 12:02:45',1),(79,'jiangbo.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张江波',1,13,'','jiangbo.zhang@cnlaunch.com',0,1,'2013-12-05 16:39:18',1),(80,'zhicheng.cai','7c4a8d09ca3762af61e59520943dc26494f8941b','蔡志成',1,9,'','zhicheng.cai@cnlaunch.com',0,1,'2013-12-05 16:48:23',1),(81,'chaoguo.yan','7c4a8d09ca3762af61e59520943dc26494f8941b','闫朝国',1,13,'','chaoguo.yan@cnlaunch.com',0,1,'2013-12-05 16:49:49',1),(82,'gang.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘刚',1,20,'','gang.liu@cnlaunch.com',0,1,'2013-12-05 16:50:36',1),(83,'wei.tan','7c4a8d09ca3762af61e59520943dc26494f8941b','覃伟',1,20,'','wei.tan@cnlaunch.com',0,1,'2013-12-05 16:52:45',1),(84,'yong.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘勇',1,20,'','yong.liu@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(85,'wei.yang','7c4a8d09ca3762af61e59520943dc26494f8941b','杨伟',1,19,'','wei.yang@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(86,'guangbiao.wu','7c4a8d09ca3762af61e59520943dc26494f8941b','吴光标',1,19,'','guangbiao.wu@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(87,'yupeng.xie','7c4a8d09ca3762af61e59520943dc26494f8941b','谢宇鹏',1,11,'','yupeng.xie@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(89,'yu.su','7c4a8d09ca3762af61e59520943dc26494f8941b','苏宇',1,20,'','yu.su@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(90,'lian.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张涟',1,20,'','lian.zhang@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(91,'youjun.xu','30db67cfb70070a7104dcd4f5b7a219afbee3676','许有均',1,20,'18682263646','youjun.xu@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(92,'xiongbo.hu','7c4a8d09ca3762af61e59520943dc26494f8941b','胡雄博',1,20,'','xiongbo.hu@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(93,'na.cai','7c4a8d09ca3762af61e59520943dc26494f8941b','蔡娜',1,20,'','na.cai@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(94,'yundong.lei','7c4a8d09ca3762af61e59520943dc26494f8941b','雷运冬',1,44,'','yundong.lei@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(95,'shelin.shen','7c4a8d09ca3762af61e59520943dc26494f8941b','申舍林',1,20,'','shelin.shen@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(188,'tao.zhao','7c4a8d09ca3762af61e59520943dc26494f8941b','赵涛',1,20,'','tao.zhao@cnlaunch.com',0,1,'2014-01-09 17:28:28',1),(97,'junjie.huang','7c4a8d09ca3762af61e59520943dc26494f8941b','黄俊杰',1,20,'','junjie.huang@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(98,'hongwei.sun','7c4a8d09ca3762af61e59520943dc26494f8941b','孙宏伟',1,20,'','hongwei.sun@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(99,'qichao.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈启超',1,20,'','qichao.chen@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(100,'haixiang.sun','7c4a8d09ca3762af61e59520943dc26494f8941b','孙海湘',1,24,'','haixiang.sun@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(101,'huajie.zhu','7c4a8d09ca3762af61e59520943dc26494f8941b','朱华杰',1,24,'','huajie.zhu@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(187,'shaoqing.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张少清',1,20,'','shaoqing.zhang@cnlaunch.com',0,1,'2014-01-09 17:28:09',1),(103,'chaokai.wang','7c4a8d09ca3762af61e59520943dc26494f8941b','王超凯',1,20,'','chaokai.wang@cnlaunch.com',0,1,'2013-12-09 10:37:16',1),(104,'bin.mao','7c4a8d09ca3762af61e59520943dc26494f8941b','毛斌',1,24,'','bin.mao@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(105,'min.tu','7c4a8d09ca3762af61e59520943dc26494f8941b','涂敏',1,24,'','min.tu@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(106,'yongbo.yong','7c4a8d09ca3762af61e59520943dc26494f8941b','王永波',1,17,'','yongbo.yong@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(108,'jicheng.lu','7c4a8d09ca3762af61e59520943dc26494f8941b','陆计成',1,1,'','jicheng.lu@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(109,'xingyong.deng','7c4a8d09ca3762af61e59520943dc26494f8941b','邓行勇',1,1,'18128836723','xingyong.deng@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(110,'pan.dong','7c4a8d09ca3762af61e59520943dc26494f8941b','董攀',1,1,'','pan.dong@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(111,'ronghua.lei','7c4a8d09ca3762af61e59520943dc26494f8941b','雷荣华',1,1,'','ronghua.lei@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(113,'jianglong.xia','7c4a8d09ca3762af61e59520943dc26494f8941b','夏江龙',1,4,'','jianglong.xia@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(116,'le.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李乐',1,17,'','le.li@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(117,'zheng.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈征',1,17,'','zheng.chen@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(118,'lingwen.zeng','7c4a8d09ca3762af61e59520943dc26494f8941b','曾令文',1,17,'','lingwen.zeng@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(119,'yi.zou','7c4a8d09ca3762af61e59520943dc26494f8941b','邹艺',1,17,'','yi.zou@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(121,'zhi.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘志',1,8,'','zhi.liu@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(122,'xiaomin.he','7c4a8d09ca3762af61e59520943dc26494f8941b','贺小敏',1,23,'','xiaomin.he@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(123,'longliang.wang','7c4a8d09ca3762af61e59520943dc26494f8941b','王龙亮',1,23,'','longliang.wang@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(124,'shidong.ma','7c4a8d09ca3762af61e59520943dc26494f8941b','马世东',1,23,'','shidong.ma@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(125,'wei.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','章维',1,9,'','wei.zhang@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(126,'xidong.zhou','7c4a8d09ca3762af61e59520943dc26494f8941b','周喜冬',1,23,'','xidong.zhou@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(127,'peishe.liang','7c4a8d09ca3762af61e59520943dc26494f8941b','梁培社',1,23,'','peishe.liang@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(128,'shengda.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张声达',1,23,'','shengda.zhang@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(129,'chuanfeng.bi','7c4a8d09ca3762af61e59520943dc26494f8941b','毕传峰',1,23,'','chuanfeng.bi@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(130,'hui.yan','7c4a8d09ca3762af61e59520943dc26494f8941b','颜辉',1,23,'','hui.yan@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(132,'zewei.wei','7c4a8d09ca3762af61e59520943dc26494f8941b','魏泽微 ',1,23,'','zewei.wei@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(133,'zhiping.wang','d94a24c47aec361dd6bc3441e77af67561f82540','王志平',1,11,'','zhiping.wang@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(134,'dengyi.zeng','7c4a8d09ca3762af61e59520943dc26494f8941b','曾登艺',1,23,'','dengyi.zeng@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(135,'jinbo.zheng','7c4a8d09ca3762af61e59520943dc26494f8941b','郑锦波',1,8,'','jinbo.zheng@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(136,'zhangchuan.wang','7c4a8d09ca3762af61e59520943dc26494f8941b','王璋传',1,8,'','zhangchuan.wang@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(137,'chuancheng.qin','7c4a8d09ca3762af61e59520943dc26494f8941b','秦川成',1,8,'','chuancheng.qin@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(138,'xuejun.tan','7c4a8d09ca3762af61e59520943dc26494f8941b','谭学君',1,8,'','xuejun.tan@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(139,'yanji.lu','7c4a8d09ca3762af61e59520943dc26494f8941b','陆彦吉',1,8,'','yanji.lu@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(140,'min.wang','7c4a8d09ca3762af61e59520943dc26494f8941b','王敏',1,8,'','min.wang@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(141,'yanjun.wang','601f1889667efaebb33b8c12572835da3f027f78','王艳军',1,8,'','yanjun.wang@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(142,'bin.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李斌 ',1,8,'','bin.li@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(143,'tian.wang','7c4a8d09ca3762af61e59520943dc26494f8941b','汪田 ',1,8,'','tian.wang@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(144,'yihui.qiu','7c4a8d09ca3762af61e59520943dc26494f8941b','丘益辉',1,15,'','yihui.qiu@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(145,'xue.mei','7c4a8d09ca3762af61e59520943dc26494f8941b','梅雪',1,11,'','xue.mei@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(146,'jiaoyan.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李姣艳',1,11,'','jiaoyan.li@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(147,'kai.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈凯',1,24,'','kai.chen@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(148,'zhijian.chen','06f2873653bb63423813805775d202ed5fe050cb','陈质健',1,21,'','zhijian.chen@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(149,'jiacheng.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈佳成',1,21,'','jiacheng.chen@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(150,'guiping.peng','7c4a8d09ca3762af61e59520943dc26494f8941b','彭桂平',1,21,'','guiping.peng@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(151,'changyuan.wu','7c4a8d09ca3762af61e59520943dc26494f8941b','吴长园',1,21,'','changyuan.wu@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(152,'junpeng.feng','7c4a8d09ca3762af61e59520943dc26494f8941b','冯军鹏',1,21,'','junpeng.feng@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(153,'lang.yu','7c4a8d09ca3762af61e59520943dc26494f8941b','余浪',1,21,'','lang.yu@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(154,'yingkai.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李英凯',1,21,'','yingkai.li@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(155,'jin.cai','7c4a8d09ca3762af61e59520943dc26494f8941b','蔡晋',1,21,'','jin.cai@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(156,'gang.wang','7c4a8d09ca3762af61e59520943dc26494f8941b','王刚',1,21,NULL,'gang.wang@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(157,'zhen.lin','7c4a8d09ca3762af61e59520943dc26494f8941b','林祯',1,21,'','zhen.lin@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(158,'xiangjun.feng','7c4a8d09ca3762af61e59520943dc26494f8941b','冯向军',1,21,'','xiangjun.feng@cnlaunch.com',0,1,'2013-12-09 10:37:17',1),(159,'ruidian.cai','7c4a8d09ca3762af61e59520943dc26494f8941b','蔡瑞典',1,21,'','ruidian.cai@cnlaunch.com',0,1,'2013-12-09 10:37:18',1),(160,'yingtao.du','7c4a8d09ca3762af61e59520943dc26494f8941b','杜映桃',1,24,'','yingtao.du@cnlaunch.com',0,1,'2013-12-09 10:37:18',1),(161,'rongjie.zhu','7c4a8d09ca3762af61e59520943dc26494f8941b','朱荣杰',1,24,'','rongjie.zhu@cnlaunch.com',0,1,'2013-12-09 10:37:18',1),(162,'weiye.zou','7c4a8d09ca3762af61e59520943dc26494f8941b','邹渭业',1,24,'','weiye.zou@cnlaunch.com',0,1,'2013-12-09 10:37:18',1),(163,'xueni.ye','7c4a8d09ca3762af61e59520943dc26494f8941b','叶雪妮',1,16,'','xueni.ye@cnlaunch.com',0,1,'2013-12-09 10:37:18',1),(253,'linfen.huang','7c4a8d09ca3762af61e59520943dc26494f8941b','黄林芬',1,15,'','linfen.huang@cnlaunch.com',0,1,'2014-03-15 15:55:42',1),(165,'jordan','7c4a8d09ca3762af61e59520943dc26494f8941b','Jordan.Villegas.Bula',1,15,'','jordan@cnlaunch.com',0,1,'2013-12-09 10:38:16',1),(166,'hua.huang','7c4a8d09ca3762af61e59520943dc26494f8941b','黄华',1,10,'','hua.huang@cnlaunch.com',0,1,'2013-12-10 10:58:15',1),(224,'yijia.wu','7c4a8d09ca3762af61e59520943dc26494f8941b','吴义嘉',1,4,'','yijia.wu@cnlaunch.com',0,1,'2014-02-14 13:28:11',1),(219,'chaobao.su','7c4a8d09ca3762af61e59520943dc26494f8941b','苏超宝',1,1,'','chaobao.su@cnlaunch.com',0,1,'2014-01-14 14:47:30',1),(179,'qingqing.zheng','7c4a8d09ca3762af61e59520943dc26494f8941b','郑青青',1,8,'','qingqing.zheng@cnlaunch.com',0,24,'2014-01-06 16:42:41',1),(181,'xianwen.hu','7c4a8d09ca3762af61e59520943dc26494f8941b','胡现文',1,8,'','xianwen.hu@cnlaunch.com',0,24,'2014-01-06 16:50:45',1),(182,'zhanzhi.luo','7c4a8d09ca3762af61e59520943dc26494f8941b','罗展志',1,8,'','zhanzhi.luo@cnlaunch.com',0,24,'2014-01-06 16:51:07',1),(183,'zhiliu.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张志柳',1,8,'','zhiliu.zhang@cnlaunch.com',0,24,'2014-01-06 16:51:28',1),(184,'you.li.cy','40900cb287c27f6e5a9e1e86a01be0b11ec858fb','李游',1,10,'15815538506','you.li.cy@cnlaunch.com',0,1,'2014-01-09 13:59:08',1),(185,'cheng.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈铖',1,10,'','cheng.chen@cnlaunch.com',0,1,'2014-01-09 14:00:44',1),(189,'yuying.xie','7c4a8d09ca3762af61e59520943dc26494f8941b','谢玉印',1,19,'','yuying.xie@cnlaunch.com',0,1,'2014-01-09 17:29:26',1),(190,'rongxiu.nan','7c4a8d09ca3762af61e59520943dc26494f8941b','南荣秀',1,19,'','rongxiu.nan@cnlaunch.com',0,1,'2014-01-09 17:30:20',1),(191,'mingbo.hu','7c4a8d09ca3762af61e59520943dc26494f8941b','胡明波',1,4,'','mingbo.hu@cnlaunch.com',0,1,'2014-01-09 17:32:16',1),(192,'sujuan.wu','7c4a8d09ca3762af61e59520943dc26494f8941b','巫素娟',1,4,'','sujuan.wu@cnlaunch.com',0,1,'2014-01-09 17:32:45',1),(193,'kun.zhao','7c4a8d09ca3762af61e59520943dc26494f8941b','赵昆',1,17,'','kun.zhao@cnlaunch.com',0,1,'2014-01-09 17:33:14',1),(194,'hong.shao','7c4a8d09ca3762af61e59520943dc26494f8941b','邵红',1,17,'','hong.shao@cnlaunch.com',0,1,'2014-01-09 17:33:29',1),(195,'qingbo.zeng','7c4a8d09ca3762af61e59520943dc26494f8941b','曾庆博',1,7,'','qingbo.zeng@cnlaunch.com',0,1,'2014-01-09 17:35:56',1),(196,'guowei.huang','7c4a8d09ca3762af61e59520943dc26494f8941b','黄国伟',1,7,'','guowei.huang@cnlaunch.com',0,1,'2014-01-09 17:36:24',1),(506,'taihua.lei','7c4a8d09ca3762af61e59520943dc26494f8941b','雷太华',1,21,'','taihua.lei@cnlaunch.com',0,1,'2014-04-14 15:45:58',1),(198,'wenjie.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张闻捷',1,48,'','wenjie.zhang@cnlaunch.com',0,1,'2014-01-09 17:37:14',1),(199,'cheng.qian','90222d316868c92b638f6530b3c7f72cc16fa8bc','钱诚',1,7,'','cheng.qian@cnlaunch.com',0,1,'2014-01-09 17:37:37',1),(200,'lunwen.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李论文',1,18,'','lunwen.li@cnlaunch.com',0,1,'2014-01-09 17:37:55',1),(201,'yongman.yi','524e05dc77239f3a15dab766aaa59a9e432efde7','易永满',1,10,'13760127502','yongman.yi@cnlaunch.com',0,1,'2014-01-09 17:38:31',1),(203,'kaiwen.zheng','7c4a8d09ca3762af61e59520943dc26494f8941b','郑凯文',1,17,'','kaiwen.zheng@cnlaunch.com',0,1,'2014-01-09 17:40:19',1),(204,'gao.wang','7c4a8d09ca3762af61e59520943dc26494f8941b','王高',1,18,'','gao.wang@cnlaunch.com',0,1,'2014-01-09 17:40:39',1),(205,'xunfeng.hu','7c4a8d09ca3762af61e59520943dc26494f8941b','胡循锋',1,20,'','xunfeng.hu@cnlaunch.com',0,1,'2014-01-09 17:40:58',1),(206,'yang.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘杨',1,7,'','yang.liu@cnlaunch.com',0,1,'2014-01-09 17:43:20',1),(207,'yansi.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李衍思',1,23,'','yansi.li@cnlaunch.com',0,1,'2014-01-09 17:43:38',1),(208,'huaihua.hu','7c4a8d09ca3762af61e59520943dc26494f8941b','胡怀华',1,7,'','huaihua.hu@cnlaunch.com',0,1,'2014-01-09 17:45:11',1),(512,'xudong.zhao','7c4a8d09ca3762af61e59520943dc26494f8941b','赵旭东',1,20,'','xudong.zhao@cnlaunch.com',0,1,'2014-04-16 10:16:39',1),(210,'shunyou.huang','7c4a8d09ca3762af61e59520943dc26494f8941b','黄顺友',1,9,'','shunyou.huang@cnlaunch.com',0,1,'2014-01-09 17:46:18',1),(504,'yiwei.shen','7c4a8d09ca3762af61e59520943dc26494f8941b','沈奕伟',1,9,'','yiwei.shen@cnlaunch.com',0,1,'2014-04-14 15:45:26',1),(214,'kaichuang.pei','d0cf955bba28e2079c24c1cb257fb014885cb487','裴开创',1,10,'13613086314','kaichuang.pei@cnlaunch.com',0,1,'2014-01-11 16:03:27',1),(225,'chao.he','7c4a8d09ca3762af61e59520943dc26494f8941b','贺超',1,8,'','chao.he@cnlaunch.com',0,1,'2014-02-14 13:29:59',1),(226,'weijiang.zeng','7c4a8d09ca3762af61e59520943dc26494f8941b','曾伟江',1,23,'','weijiang.zeng@cnlaunch.com',0,1,'2014-02-14 13:30:51',1),(222,'kai.mo','7c4a8d09ca3762af61e59520943dc26494f8941b','莫凯',1,6,'','kai.mo@cnlaunch.com',0,1,'2014-01-14 15:39:46',1),(510,'lin.mei','7c4a8d09ca3762af61e59520943dc26494f8941b','梅林',1,10,'','lin.mei@cnlaunch.com',0,1,'2014-04-14 15:47:42',1),(227,'haiqin.wang','7c4a8d09ca3762af61e59520943dc26494f8941b','王海钦',1,8,'','haiqin.wang@cnlaunch.com',0,1,'2014-02-14 13:31:17',1),(228,'chun.jiang','7c4a8d09ca3762af61e59520943dc26494f8941b','江纯',1,10,'','chun.jiang@cnlaunch.com',0,1,'2014-02-14 13:31:44',1),(229,'yanhua.yin','9d00bd38995df8fb5116c1f448343b13d32a7b52','尹艳华',1,23,'','yanhua.yin@cnlaunch.com',0,1,'2014-02-14 13:32:09',1),(230,'lijun.zhou','7c4a8d09ca3762af61e59520943dc26494f8941b','周梨君',1,16,'','lijun.zhou@cnlaunch.com',0,1,'2014-02-14 13:32:45',1),(231,'zhenyu.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘振雨',1,23,'','zhenyu.liu@cnlaunch.com',0,1,'2014-02-17 12:26:41',1),(232,'puming.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张谱铭',1,8,'','puming.zhang@cnlaunch.com',0,1,'2014-02-17 12:27:01',1),(233,'qi.an','7c4a8d09ca3762af61e59520943dc26494f8941b','安琪',1,23,'','qi.an@cnlaunch.com',0,1,'2014-02-18 14:52:01',1),(234,'qingxun.liang','7c4a8d09ca3762af61e59520943dc26494f8941b','梁庆勋',1,18,'','qingxun.liang@cnlaunch.com',0,1,'2014-02-18 14:54:40',1),(235,'fu.shu','7c4a8d09ca3762af61e59520943dc26494f8941b','舒福',1,9,'','fu.shu@cnlaunch.com',0,9,'2014-02-26 17:19:40',1),(236,'jinlong.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈金龙',1,8,'','jinlong.chen@cnlaunch.com',0,1,'2014-02-26 18:46:05',1),(237,'pengxun.zhou','7c4a8d09ca3762af61e59520943dc26494f8941b','周鹏勋',1,8,'','pengxun.zhou@cnlaunch.com',0,1,'2014-02-26 18:49:40',1),(238,'bo.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张博',1,8,'','bo.zhang@cnlaunch.com',0,1,'2014-02-26 18:50:08',1),(239,'jun.huang','7c4a8d09ca3762af61e59520943dc26494f8941b','黄军',1,10,'','jun.huang@cnlaunch.com',0,1,'2014-02-26 18:50:30',1),(240,'junchi.zhong','7c4a8d09ca3762af61e59520943dc26494f8941b','钟骏驰',1,8,'','junchi.zhong@cnlaunch.com',0,1,'2014-02-26 18:50:48',1),(241,'shilong.xiang','7c4a8d09ca3762af61e59520943dc26494f8941b','向仕龙',1,9,'','shilong.xiang@cnlaunch.com',0,1,'2014-02-26 18:51:24',1),(242,'naibo.yang','7c4a8d09ca3762af61e59520943dc26494f8941b','杨乃博',1,9,'','naibo.yang@cnlaunch.com',0,1,'2014-02-26 18:51:49',1),(243,'lin.lv','7c4a8d09ca3762af61e59520943dc26494f8941b','吕霖',1,8,'','lin.lv@cnlaunch.com',0,1,'2014-02-26 18:52:03',1),(245,'chaoqian.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈超前',1,23,'','chaoqian.chen@cnlaunch.com',0,1,'2014-03-04 18:10:02',1),(246,'xingxing.tian','7c4a8d09ca3762af61e59520943dc26494f8941b','田星星',1,8,'','xingxing.tian@cnlaunch.com',0,1,'2014-03-04 18:10:23',1),(247,'weiqiao.zeng','7c4a8d09ca3762af61e59520943dc26494f8941b','曾维桥',1,8,'','weiqiao.zeng@cnlaunch.com',0,1,'2014-03-04 18:10:41',1),(248,'zhifa.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李志发',1,8,'','zhifa.li@cnlaunch.com',0,1,'2014-03-07 10:48:13',1),(249,'caiwang.sheng','7c4a8d09ca3762af61e59520943dc26494f8941b','盛才望',1,9,'','caiwang.sheng@cnlaunch.com',0,1,'2014-03-07 10:48:32',1),(250,'huiqiang.fu','7c4a8d09ca3762af61e59520943dc26494f8941b','傅慧强',1,8,'','huiqiang.fu@cnlaunch.com',0,1,'2014-03-07 10:48:54',1),(251,'jiangtao.zhou','7c4a8d09ca3762af61e59520943dc26494f8941b','周江涛',1,23,'','jiangtao.zhou@cnlaunch.com',0,1,'2014-03-07 10:49:16',1),(252,'guozhen.huang','7c4a8d09ca3762af61e59520943dc26494f8941b','黄国真',1,2,'','guozhen.huang@cnlaunch.com',1,1,'2014-03-10 11:22:23',1),(254,'buqing.cao','06c0b6ae624da4ac3e8bb8392c532ebf3f1e6516','曹步青',1,9,'','buqing.cao@cnlaunch.com',0,1,'2014-03-17 09:58:27',1),(262,'dejian.liang','7c4a8d09ca3762af61e59520943dc26494f8941b','梁德坚',1,48,'','dejian.liang@cnlaunch.com',0,1,'2014-03-24 20:04:40',1),(256,'le.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张乐',1,48,'','le.zhang@cnlaunch.com',0,1,'2014-03-20 10:04:25',1),(257,'yongqiang.jin','7c4a8d09ca3762af61e59520943dc26494f8941b','金永强',1,7,'','yongqiang.jin@cnlaunch.com',0,1,'2014-03-20 10:08:22',1),(258,'guandong.xin','7c4a8d09ca3762af61e59520943dc26494f8941b','辛冠东',1,8,'','guandong.xin@cnlaunch.com',0,1,'2014-03-20 10:08:51',1),(259,'yuanyuan.qin','7e19073637860aa92ecc3300d8d0a4636613b8e4','覃圆圆',1,7,'','yuanyuan.qin@cnlaunch.com',0,1,'2014-03-21 10:04:12',1),(260,'meiping.he','7c4a8d09ca3762af61e59520943dc26494f8941b','何美平',1,11,'','meiping.he@cnlaunch.com',0,1,'2014-03-21 10:04:45',1),(261,'kongyan.huang','a052a9248fcac560e6839cf1c66f7f64c5bcfb32','黄孔炎',1,8,'','kongyan.huang@cnlaunch.com',0,1,'2014-03-21 10:05:22',1),(263,'qiang.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李强',1,10,'','qiang.li@cnlaunch.com',0,1,'2014-03-25 09:43:04',1),(264,'chen.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘陈',1,9,'','chen.liu@cnlaunch.com',0,1,'2014-03-31 16:05:24',1),(706,'yanpeng.ren','7c4a8d09ca3762af61e59520943dc26494f8941b','任雁鹏',1,10000,'','yanpeng.ren@cnlaunch.com',0,1,'2014-05-14 09:56:19',1),(502,'chaming.song','862bffd3a14f343f266de6ae527e300e23798289','宋查明',1,7,'18565643399','chaming.song@cnlaunch.com',0,9,'2014-04-10 09:46:49',1),(528,'zhixin.wang','50ee99bb70b37dfd713de32880a534bb35dd0888','王志新',1,10000,'','zhixin.wang@cnlaunch.com',0,1,'2014-04-01 19:59:10',1),(526,'zheng.chen','50ee99bb70b37dfd713de32880a534bb35dd0888','陈征',1,10000,'','zheng.chen@cnlaunch.com',0,1,'2014-04-01 19:58:33',1),(596,'wenlong.hua','7c4a8d09ca3762af61e59520943dc26494f8941b','花文龙',1,7,'','wenlong.hua@cnlaunch.com',0,1,'2014-04-22 11:45:51',1),(522,'kun.zhao','50ee99bb70b37dfd713de32880a534bb35dd0888','赵昆',1,10000,'','kun.zhao@cnlaunch.com',0,1,'2014-04-01 19:57:41',1),(520,'kaiwen.zhen','50ee99bb70b37dfd713de32880a534bb35dd0888','郑凯文',1,10000,'','kaiwen.zhen@cnlaunch.com',0,1,'2014-04-01 19:55:35',1),(519,'le.li','50ee99bb70b37dfd713de32880a534bb35dd0888','李乐',1,10000,'','le.li@cnlaunch.com',0,1,'2014-04-01 19:53:30',1),(518,'lingwen.zeng','50ee99bb70b37dfd713de32880a534bb35dd0888','曾令文',1,10000,'','lingwen.zeng@cnlaunch.com',0,1,'2014-04-01 19:53:00',1),(516,'sikai.li','50ee99bb70b37dfd713de32880a534bb35dd0888','李思凯',1,10000,'','sikai.li@cnlaunch.com',0,1,'2014-04-01 19:52:17',1),(532,'qian.ning','50ee99bb70b37dfd713de32880a534bb35dd0888','宁倩',1,10000,'','qian.ning@cnlaunch.com',0,1,'2014-04-01 19:59:53',1),(534,'jinsong.liao','50ee99bb70b37dfd713de32880a534bb35dd0888','廖劲松',1,10000,'','jinsong.liao@cnlaunch.com',0,1,'2014-04-01 20:00:57',1),(584,'yongpan.zhang','1f324b10a37e44d604fd9637cde54bed321fd204','张勇攀',1,10000,'','yongpan.zhang@cnlaunch.com',0,9,'2014-04-18 16:49:22',1),(586,'yuanzhi.zhai','7c4a8d09ca3762af61e59520943dc26494f8941b','翟远志',1,48,'','yuanzhi.zhai@cnlaunch.com',0,1,'2014-04-21 13:47:05',1),(588,'lei.fang','7c4a8d09ca3762af61e59520943dc26494f8941b','方磊',1,23,'','lei.fang@cnlaunch.com',0,1,'2014-04-21 13:47:50',1),(590,'hu.ji','7c4a8d09ca3762af61e59520943dc26494f8941b','戢虎',1,9,'','hu.ji@cnlaunch.com',0,1,'2014-04-21 13:48:07',1),(592,'shuang.yang','7c4a8d09ca3762af61e59520943dc26494f8941b','杨双',1,10,'','shuang.yang@cnlaunch.com',0,1,'2014-04-21 13:48:29',1),(594,'guangfu.shen','7c4a8d09ca3762af61e59520943dc26494f8941b','沈光富',1,10,'','guangfu.shen@cnlaunch.com',0,1,'2014-04-21 13:48:47',1),(598,'shaojun.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘绍军',1,40,'','shaojun.liu@cnlaunch.com',0,1,'2014-04-25 11:45:24',1),(600,'su.luo','7c4a8d09ca3762af61e59520943dc26494f8941b','罗苏',1,40,'','su.luo@cnlaunch.com',0,1,'2014-04-25 11:46:07',1),(602,'cihua.wang','7c4a8d09ca3762af61e59520943dc26494f8941b','王慈花',1,40,'','cihua.wang@cnlaunch.com',0,1,'2014-04-25 11:46:31',1),(604,'fang.yan','7c4a8d09ca3762af61e59520943dc26494f8941b','闫芳',1,40,'','fang.yan@cnlaunch.com',0,1,'2014-04-25 11:46:49',1),(606,'zhenhua.xiang','7c4a8d09ca3762af61e59520943dc26494f8941b','向振华',1,40,'','zhenhua.xiang@cnlaunch.com',0,1,'2014-04-25 11:47:10',1),(608,'wuxiang.liao','7c4a8d09ca3762af61e59520943dc26494f8941b','廖武享',1,40,'','wuxiang.liao@cnlaunch.com',0,1,'2014-04-25 11:47:28',1),(610,'yun.yan','7c4a8d09ca3762af61e59520943dc26494f8941b','严赟',1,40,'','yun.yan@cnlaunch.com',0,1,'2014-04-25 11:48:15',1),(612,'liang.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈亮',1,40,'','liang.chen@cnlaunch.com',0,1,'2014-04-25 11:48:49',1),(614,'zhiwei.hu','7c4a8d09ca3762af61e59520943dc26494f8941b','胡志伟',1,40,'','zhiwei.hu@cnlaunch.com',0,1,'2014-04-25 11:49:26',1),(616,'dongxiang.wei','7c4a8d09ca3762af61e59520943dc26494f8941b','韦冬香',1,40,'','dongxiang.wei@cnlaunch.com',0,1,'2014-04-25 11:49:53',1),(618,'hongjiao.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李洪娇',1,40,'','hongjiao.li@cnlaunch.com',0,1,'2014-04-25 11:50:10',1),(620,'hongxia.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈红霞',1,40,'','hongxia.chen@cnlaunch.com',0,1,'2014-04-25 11:50:28',1),(622,'yuan.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘元',1,40,'','yuan.liu@cnlaunch.com',0,1,'2014-04-25 11:50:50',1),(624,'fang.fang','7c4a8d09ca3762af61e59520943dc26494f8941b','方芳',1,40,'','fang.fang@cnlaunch.com',0,1,'2014-04-25 11:51:08',1),(626,'shengqin.zeng','7c4a8d09ca3762af61e59520943dc26494f8941b','曾圣琴',1,40,'','shengqin.zeng@cnlaunch.com',0,1,'2014-04-25 11:51:24',1),(628,'jihong.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘济红',1,40,'','jihong.liu@cnlaunch.com',0,1,'2014-04-25 11:51:41',1),(630,'linjuan.he','7c4a8d09ca3762af61e59520943dc26494f8941b','何林娟',1,40,'','linjuan.he@cnlaunch.com',0,1,'2014-04-25 11:51:58',1),(632,'guanping.meng','7c4a8d09ca3762af61e59520943dc26494f8941b','蒙冠平',1,40,'','guanping.meng@cnlaunch.com',0,1,'2014-04-25 11:52:38',1),(634,'jiao.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘姣',1,40,'','jiao.liu@cnlaunch.com',0,1,'2014-04-25 11:52:56',1),(636,'yue.ge','7c4a8d09ca3762af61e59520943dc26494f8941b','葛悦',1,40,'','yue.ge@cnlaunch.com',0,1,'2014-04-25 11:53:29',1),(638,'susu.mao','7c4a8d09ca3762af61e59520943dc26494f8941b','毛素素',1,40,'','susu.mao@cnlaunch.com',0,1,'2014-04-25 11:53:47',1),(640,'qiutang.wu','7c4a8d09ca3762af61e59520943dc26494f8941b','吴秋棠',1,40,'','qiutang.wu@cnlaunch.com',0,1,'2014-04-25 11:54:10',1),(642,'guang.xia','7c4a8d09ca3762af61e59520943dc26494f8941b','夏广',1,40,'','guang.xia@cnlaunch.com',0,1,'2014-04-25 11:54:28',1),(644,'qiufang.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李秋芳',1,40,'','qiufang.li@cnlaunch.com',0,1,'2014-04-25 11:54:44',1),(646,'panpan.zheng','7c4a8d09ca3762af61e59520943dc26494f8941b','郑盼盼',1,40,'','panpan.zheng@cnlaunch.com',0,1,'2014-04-25 11:55:01',1),(648,'liuchan.tan','7c4a8d09ca3762af61e59520943dc26494f8941b','覃柳婵',1,40,'','liuchan.tan@cnlaunch.com',0,1,'2014-04-25 11:55:29',1),(650,'ying.fan','7c4a8d09ca3762af61e59520943dc26494f8941b','范瑛',1,40,'','ying.fan@cnlaunch.com',0,1,'2014-04-25 11:55:52',1),(652,'youmei.zhen','7c4a8d09ca3762af61e59520943dc26494f8941b','甄优美',1,40,'','youmei.zhen@cnlaunch.com',0,1,'2014-04-25 11:56:11',1),(654,'pengfei.tan','7c4a8d09ca3762af61e59520943dc26494f8941b','谭鹏飞',1,1,'','pengfei.tan@cnlaunch.com',0,9,'2014-04-25 14:25:26',1),(656,'qicheng.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈其成',1,8,'','qicheng.chen@cnlaunch.com',0,9,'2014-04-26 10:31:07',1),(658,'guigen.hu','7c4a8d09ca3762af61e59520943dc26494f8941b','胡贵根',1,10,'','guigen.hu@cnlaunch.com',0,1,'2014-04-26 15:55:32',1),(660,'jie.liang','7c4a8d09ca3762af61e59520943dc26494f8941b','梁捷',1,1,'','jie.liang@cnlaunch.com',0,1,'2014-04-28 09:30:00',1),(662,'gang.liu.by','7c4a8d09ca3762af61e59520943dc26494f8941b','刘刚',1,7,'','gang.liu.wb@cnlaunch.com',0,1,'2014-04-28 10:06:53',1),(664,'jin.huang','50ee99bb70b37dfd713de32880a534bb35dd0888','黄进',1,42,'','jin.huang@cnlaunch.com',0,9,'2014-04-29 17:39:16',1),(666,'zhenyang.zhuang','7c4a8d09ca3762af61e59520943dc26494f8941b','庄振洋',1,18,'','zhenyang.zhuang@cnlaunch.com',0,1,'2014-05-07 10:30:35',1),(668,'xiangwu.deng','7c4a8d09ca3762af61e59520943dc26494f8941b','邓向武',1,19,'','xiangwu.deng@cnlaunch.com',0,1,'2014-05-07 10:31:20',1),(670,'liangqin.luo','7c4a8d09ca3762af61e59520943dc26494f8941b','罗良庆',1,19,'','liangqin.luo@cnlaunch.com',0,1,'2014-05-07 10:31:49',1),(672,'yuanpeng.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘远鹏',1,10,'','yuanpeng.liu@cnlaunch.com',0,1,'2014-05-07 10:34:17',1),(726,'xingwang.he','7c4a8d09ca3762af61e59520943dc26494f8941b','赫兴旺',1,6,'','xingwang.he@cnlaunch.com',0,1,'2014-05-28 11:36:37',1),(676,'qingsong.yu','7c4a8d09ca3762af61e59520943dc26494f8941b','余青松',1,44,'','qingsong.yu@cnlaunch.com',0,1,'2014-05-08 16:10:34',1),(678,'shiqin.zhou','7c4a8d09ca3762af61e59520943dc26494f8941b','周士芹',1,44,'','shiqin.zhou@cnlaunch.com',0,1,'2014-05-08 16:12:43',1),(680,'qingfang.li','7c4a8d09ca3762af61e59520943dc26494f8941b','李清芳',1,44,'','qingfang.li@cnlaunch.com',0,1,'2014-05-08 16:13:23',1),(682,'sijing.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张斯净',1,44,'','sijing.zhang@cnlaunch.com',0,1,'2014-05-08 16:13:53',1),(684,'qun.you','7c4a8d09ca3762af61e59520943dc26494f8941b','尤群',1,44,'','qun.you@cnlaunch.com',0,1,'2014-05-08 16:14:33',1),(686,'lisha.yang','7c4a8d09ca3762af61e59520943dc26494f8941b','杨丽萨',1,44,'','lisha.yang@cnlaunch.com',0,1,'2014-05-08 16:14:55',1),(688,'nianying.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈年英',1,44,'','nianying.chen@cnlaunch.com',0,1,'2014-05-08 16:16:30',1),(690,'yongchang.he','7c4a8d09ca3762af61e59520943dc26494f8941b','贺永畅',1,44,'','yongchang.he@cnlaunch.com',0,1,'2014-05-08 16:17:00',1),(692,'bei.yan','7c4a8d09ca3762af61e59520943dc26494f8941b','鄢贝',1,44,'','bei.yan@cnlaunch.com',0,1,'2014-05-08 16:18:03',1),(694,'lu.nie','7c4a8d09ca3762af61e59520943dc26494f8941b','聂璐',1,44,'','lu.nie@cnlaunch.com',0,1,'2014-05-08 16:18:33',1),(696,'quhua.yang','7c4a8d09ca3762af61e59520943dc26494f8941b','杨曲华',1,44,'','quhua.yang@cnlaunch.com',0,1,'2014-05-08 16:19:01',1),(698,'shaoting.lin','7c4a8d09ca3762af61e59520943dc26494f8941b','林少婷',1,44,'','shaoting.lin@cnlaunch.com',0,1,'2014-05-08 16:19:27',1),(704,'shufeng.pi','7c4a8d09ca3762af61e59520943dc26494f8941b','皮署锋',1,1,'','shufeng.pi@cnlaunch.com',0,1,'2014-05-14 09:42:34',1),(708,'wei.zhan','7c4a8d09ca3762af61e59520943dc26494f8941b','詹伟',1,21,'','wei.zhan@cnlaunch.com',0,1,'2014-05-14 13:49:39',1),(710,'xinhuan.fan','7c4a8d09ca3762af61e59520943dc26494f8941b','范欣桓',1,21,'','xinhuan.fan@cnlaunch.com',0,1,'2014-05-14 13:50:25',1),(712,'xiaojin.guan','7c4a8d09ca3762af61e59520943dc26494f8941b','官晓进',1,21,'','xiaojin.guan@cnlaunch.com',0,1,'2014-05-14 13:51:03',1),(714,'guozhu.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘国柱',1,21,'','guozhu.liu@cnlaunch.com',0,1,'2014-05-14 13:51:30',1),(716,'huilan.chen','7c4a8d09ca3762af61e59520943dc26494f8941b','陈慧兰',1,46,'','huilan.chen@cnlaunch.com',0,1,'2014-05-16 10:15:25',1),(718,'youliang.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张友良',1,48,'','youliang.zhan@cnlaunch.com',0,1,'2014-05-20 17:53:34',1),(720,'junyi.cheng','7c4a8d09ca3762af61e59520943dc26494f8941b','成俊熠',1,7,'','junyi.cheng@cnlaunch.com',0,1,'2014-05-20 17:54:00',1),(722,'wenjing.liu','7c4a8d09ca3762af61e59520943dc26494f8941b','刘文璟',1,4,'wenjing.liu','wenjing.liu@cnlaunch.com',0,1,'2014-05-20 17:54:50',1),(724,'renwen.jiang','7c4a8d09ca3762af61e59520943dc26494f8941b','江仁文',1,7,'','renwen.jiang@cnlaunch.com',0,1,'2014-05-20 17:55:15',1),(728,'longyun.lin','7c4a8d09ca3762af61e59520943dc26494f8941b','林龙云',1,44,'','longyun.lin@cnlaunch.com',0,1,'2014-06-03 11:50:12',1),(730,'peng.zhang','7c4a8d09ca3762af61e59520943dc26494f8941b','张鹏',1,1,'','peng.zhang@cnlaunch.com',0,1,'2014-06-03 16:39:36',1);
+insert  into `user`(`id`,`username`,`password`,`name`,`role_id`,`mobile`,`email`,`status`,`created_on`,`modified_on`) values (1,'admin','50ee99bb70b37dfd713de32880a534bb35dd0888','超级管理员',1,'15815513380','admin@cnlaunch.com',1,'2013-09-24 20:27:05','2013-09-24 20:27:05');
+
+/*Table structure for table `work_history` */
+
+DROP TABLE IF EXISTS `work_history`;
+
+CREATE TABLE `work_history` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  `company_name` varchar(500) NOT NULL COMMENT '公司名称',
+  `address` varchar(500) DEFAULT NULL COMMENT '公司地址',
+  `department` varchar(500) DEFAULT NULL COMMENT '工作部门',
+  `contact` varchar(500) DEFAULT NULL COMMENT '联系人',
+  `cellphone` int(11) DEFAULT NULL COMMENT '联系电话',
+  `start_date` date DEFAULT NULL COMMENT '开始日期',
+  `end_date` date DEFAULT NULL COMMENT '结束日期',
+  `created_on` datetime DEFAULT NULL COMMENT '创建日期',
+  `modified_on` datetime DEFAULT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `work_history` */
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
