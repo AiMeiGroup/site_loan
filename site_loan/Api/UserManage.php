@@ -182,7 +182,7 @@ class UserManage
 		try {
 
 			$filtes["username"] = $username;
-			$filds = array('id', 'username', 'name','role_id', 'mobile', 'email', 'status', 'create_user_id', 'create_time');
+			$filds = array('id', 'username', 'name','role_id', 'mobile', 'email', 'status', 'created_user_id', 'created_on');
 			return UserTable::instance()->get(null, $filds, $filtes);
 		} catch (Exception $e) {
 			throw($e);
