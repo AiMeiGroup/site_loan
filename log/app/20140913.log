@@ -1,0 +1,11 @@
+2014-09-13 16:54:38	C:\ld\github\site_loan\lavender\WebPage.php(190)	1301	View not found:index/index
+#0 C:\ld\github\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\github\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#2 C:\ld\github\site_loan\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-09-13 16:54:38	C:\ld\github\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\github\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\github\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\github\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#3 C:\ld\github\site_loan\app\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}

@@ -7565,3 +7565,7 @@ passed to App\Api\Dao\UserTable::get() must be of the type array, null given, ca
 14-09-10 21:51:48	F:\work\dev\site_dk\lavender\WebPage.php:189	2	include(): Failed opening 'F:\work\dev\site_dk\app/view/index/index.php' for inclusion (include_path='.;F:\xampp\php\PEAR')
 14-09-10 21:51:48	F:\work\dev\site_dk\lavender\WebPage.php:189	2	include(F:\work\dev\site_dk\app/view/common/error.php): failed to open stream: No such file or directory
 14-09-10 21:51:48	F:\work\dev\site_dk\lavender\WebPage.php:189	2	include(): Failed opening 'F:\work\dev\site_dk\app/view/common/error.php' for inclusion (include_path='.;F:\xampp\php\PEAR')
+14-09-13 16:54:37	C:\ld\github\site_loan\lavender\WebPage.php:189	2	include(C:\ld\github\site_loan\app/view/index/index.php): failed to open stream: No such file or directory
+14-09-13 16:54:38	C:\ld\github\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\github\site_loan\app/view/index/index.php' for inclusion (include_path='.;C:\ld\PHP\xampp\php\PEAR')
+14-09-13 16:54:38	C:\ld\github\site_loan\lavender\WebPage.php:189	2	include(C:\ld\github\site_loan\app/view/common/error.php): failed to open stream: No such file or directory
+14-09-13 16:54:38	C:\ld\github\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\github\site_loan\app/view/common/error.php' for inclusion (include_path='.;C:\ld\PHP\xampp\php\PEAR')
