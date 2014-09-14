@@ -36,7 +36,7 @@ echo($LANG);
 				if (data.status == 1) {
 					$('#lblmessage').html(data.info).show();
 					// 更新列表
-					location.href = "?action=main.index";
+					location.href = "?action=home.index";
 
 				} else {
 					$('#lblmessage').html(data.info).show();
