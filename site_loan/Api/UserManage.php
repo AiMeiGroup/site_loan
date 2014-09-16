@@ -1,11 +1,4 @@
-<?php
-/**
- * Created by JetBrains PhpStorm.
- * User: wanwenyou
- * Date: 13-9-13
- * Time: 下午3:38
- * To change this template use File | Settings | File Templates.
- */
+ <?php
 
 namespace App\Api;
 
@@ -19,19 +12,18 @@ class UserManage
 	/**
 	 *新增数据
 	 */
-	public static function add($username, $password, $name, $dept_id, $role_id, $mobile, $email, $create_user_id)
+	public static function add($username, $password, $name, $role_id, $mobile, $email, $create_user_id)
 	{
 		try {
 
 			$arr["username"] = $username;
 			$arr["name"] = $name;
 			$arr["password"] = $password;
-			$arr["dept_id"] = $dept_id;
 			$arr["role_id"] = $role_id;
 			$arr["mobile"] = $mobile;
 			$arr["email"] = $email;
 			$arr["create_user_id"] = $create_user_id;
-			$arr["create_time"] = date('Y-m-d H:i:s', time());
+			$arr["created_on"] = date('Y-m-d H:i:s', time());
 			$id = \Lavender\IdMaker::make('user');
 			return Dao\UserTable::instance()->add($id, $arr);
 
@@ -76,16 +68,13 @@ class UserManage
 
 	/**
 	 * 更新用户信息
-	 * 更新用户姓名，部门，角色，电话 ，邮件
+	 * 更新用户姓名，角色，电话 ，邮件, 编辑时间
 	 */
-	public static function  update($id, $name, $dept_id, $role_id, $mobile, $email)
+	public static function  update($id, $name, $role_id, $mobile, $email)
 	{
 		try {
 			if (isset($name)) {
 				$arr["name"] = $name;
-			}
-			if (isset($dept_id)) {
-				$arr["dept_id"] = $dept_id;
 			}
 			if (isset($role_id)) {
 				$arr["role_id"] = $role_id;
@@ -96,6 +85,7 @@ class UserManage
 			if (isset($email)) {
 				$arr["email"] = $email;
 			}
+			$arr["modified_on"] = date('Y-m-d H:i:s', time());
 			return Dao\UserTable::instance()->update($id, $arr);
 		} catch (Exception $e) {
 			throw($e);
@@ -105,20 +95,16 @@ class UserManage
 	/**
 	 * 根据ID查用户信息
 	 */
-	public static function get_data_by_id($id, $dept_id = null, $role_id = null, $name = null, $order = null, $offset = null, $length = null)
+	public static function get_data_by_id($id, $role_id = null, $name = null, $order = null, $offset = null, $length = null)
 	{
 		try {
-
-			if (isset($dept_id)) {
-				$filtes["dept_id"] = $dept_id;
-			}
 			if (isset($role_id)) {
 				$filtes["role_id"] = $role_id;
 			}
 			if (isset($name)) {
 				$filtes["name"] = $name;
 			}
-			$filds = array('id', 'username', 'name', 'dept_id', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'create_time','group_id');
+			$filds = array('id', 'username', 'name', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'created_on', 'modified_on');
 			return UserTable::instance()->get($id, $filds, $filtes, $order, $offset, $length);
 		} catch (Exception $e) {
 			throw($e);
@@ -128,13 +114,9 @@ class UserManage
 	/**
 	 * 根据ID查用户信息
 	 */
-	public static function search_data($id = null, $dept_id = null, $role_id = null, $name = null, $username = null, $order = null, $offset = null, $length = null)
+	public static function search_data($id = null, $role_id = null, $name = null, $username = null, $order = null, $offset = null, $length = null)
 	{
 		try {
-
-			if (isset($dept_id)) {
-				$filtes["dept_id"] = $dept_id;
-			}
 			if (isset($role_id)) {
 				$filtes["role_id"] = $role_id;
 			}
@@ -144,20 +126,17 @@ class UserManage
 			if (isset($username)) {
 				$filtes["username"] = $username;
 			}
-			$filds = array('id', 'username', 'name', 'dept_id', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'create_time');
+			$filds = array('id', 'username', 'name', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'created_on', 'modified_on');
 			return UserTable::instance()->get($id, $filds, $filtes, $order, $offset, $length);
 		} catch (Exception $e) {
 			throw($e);
 		}
 	}
 
-	public static function get_search_count($id = null, $dept_id = null, $role_id = null, $name = null, $username = null)
+	public static function get_search_count($id = null, $role_id = null, $name = null, $username = null)
 	{
 		try {
 
-			if (isset($dept_id)) {
-				$filtes["dept_id"] = $dept_id;
-			}
 			if (isset($role_id)) {
 				$filtes["role_id"] = $role_id;
 			}
@@ -167,7 +146,7 @@ class UserManage
 			if (isset($username)) {
 				$filtes["username"] = $username;
 			}
-			$filds = array('id', 'username', 'name', 'dept_id', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'create_time');
+			$filds = array('id', 'username', 'name', 'dept_id', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'created_on', 'modified_on');
 			return UserTable::instance()->count($id, $filtes);
 		} catch (Exception $e) {
 			throw($e);
@@ -182,7 +161,7 @@ class UserManage
 		try {
 
 			$filtes["username"] = $username;
-			$filds = array('id', 'username', 'name','role_id', 'mobile', 'email', 'status', 'created_user_id', 'created_on');
+			$filds = array('id', 'username', 'name','role_id', 'mobile', 'email', 'status', 'created_user_id', 'created_on', 'modified_on');
 			return UserTable::instance()->get(null, $filds, $filtes);
 		} catch (Exception $e) {
 			throw($e);
