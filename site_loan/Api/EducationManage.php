@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Created by JetBrains PhpStorm.
@@ -9,11 +10,11 @@
 
 namespace App\Api;
 
-use App\Api\Dao\UserTable;
+use App\Api\Dao\EducationTable;
 use Lavender\Errno;
 use Lavender\Exception;
 
-class UserManage
+class EducationManage
 {
 
 	/**
@@ -33,7 +34,7 @@ class UserManage
 			$arr["create_user_id"] = $create_user_id;
 			$arr["create_time"] = date('Y-m-d H:i:s', time());
 			$id = \Lavender\IdMaker::make('user');
-			return Dao\UserTable::instance()->add($id, $arr);
+			return Dao\EducationTable::instance()->add($id, $arr);
 
 
 		} catch (Exception $e) {
@@ -256,6 +257,7 @@ class UserManage
 			throw($e);
 		}
 	}
+
 
 
 }
