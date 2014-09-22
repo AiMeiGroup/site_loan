@@ -48,9 +48,17 @@ CREATE TABLE `borrow` (
   `closing_cost` varchar(255) DEFAULT NULL COMMENT '借款手续费',
   `fundraising_days` int(11) DEFAULT NULL COMMENT '筹款天数',
   `status` int(11) DEFAULT NULL COMMENT '状态：1:未审核，2：审核通过，3：审核不通过',
-  `remark` varchar(255) DEFAULT NULL COMMENT '备注信息',
-  `start_time` datetime NOT NULL COMMENT '开始时间',
-  `end_time` datetime NOT NULL COMMENT '结束时间',
+  `first_trial` varchar(255) DEFAULT NULL COMMENT '初审处理意见',
+  `retrial` varchar(255) DEFAULT NULL COMMENT '复审处理意见',
+  `repayment_amount` varchar(255) DEFAULT NULL COMMENT '已还金额',
+  `operator` varchar(255) DEFAULT NULL COMMENT '处理人',
+  `reason` varchar(255) DEFAULT NULL COMMENT '处理说明',
+  `overdue_days` int(11) DEFAULT NULL COMMENT '逾期天数',
+  `forfeit` varchar(255) DEFAULT NULL COMMENT '罚金',
+  `cui_charges` varchar(255) DEFAULT NULL COMMENT '催收费',
+  `remark` varchar(255) DEFAULT NULL COMMENT '借款说明',
+  `start_time` datetime NOT NULL COMMENT '借款开始时间',
+  `end_time` datetime NOT NULL COMMENT '借款结束时间',
   `created_on` datetime NOT NULL COMMENT '创建日期',
   `modified_on` datetime NOT NULL COMMENT '修改日期',
   PRIMARY KEY (`id`)
@@ -163,9 +171,9 @@ CREATE TABLE `house` (
   `area` varchar(255) NOT NULL COMMENT '建筑面积',
   `year` int(11) NOT NULL COMMENT '年份',
   `status` int(11) DEFAULT NULL COMMENT '供款状态：0:已供完房款,1:按揭中',
-  `ower_1` varchar(255) DEFAULT NULL COMMENT '所有权人1',
+  `owner_1` varchar(255) DEFAULT NULL COMMENT '所有权人1',
   `percent_1` varchar(255) DEFAULT NULL COMMENT '产权份额1',
-  `ower_2` varchar(255) DEFAULT NULL COMMENT '所有权人2',
+  `owner_2` varchar(255) DEFAULT NULL COMMENT '所有权人2',
   `percent_2` varchar(255) DEFAULT NULL COMMENT '产权份额2',
   `period` varchar(255) DEFAULT NULL COMMENT '贷款年限',
   `monthly_payment` varchar(255) DEFAULT NULL COMMENT '月供',
@@ -268,13 +276,14 @@ CREATE TABLE `role` (
   `id` double DEFAULT NULL,
   `name` varchar(150) DEFAULT NULL,
   `description` varchar(765) DEFAULT NULL,
-  `create_user_id` double DEFAULT NULL,
-  `create_time` datetime DEFAULT NULL
+  `created_user_id` double DEFAULT NULL,
+  `created_on` datetime DEFAULT NULL,
+  `modified_on` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `role` */
 
-insert  into `role`(`id`,`name`,`description`,`create_user_id`,`create_time`) values (1,'产品组','产品工程师，产品经理',1,'2013-09-24 20:24:30'),(2,'管理员组','管理员组',1,'2013-09-24 20:24:37'),(24,'总部_鹏奥达','总部_鹏奥达',9,'2014-01-14 14:31:27'),(4,'设计组','网页重构师，视觉设计师，交互设计师',1,'2013-11-12 17:25:40'),(5,'架构组','系统架构师',1,'2013-11-12 17:25:51'),(6,'平台开发组','web前端开发工程师，后台开发工程师',1,'2013-11-12 17:26:09'),(7,'应用开发组','web前端开发工程师，后台开发工程师',1,'2013-11-12 17:26:19'),(8,'GOLO客户端iOS开发组','iOS开发工程师',1,'2013-11-12 17:26:30'),(9,'GOLO客户端Android开发组','Android开发工程师',1,'2013-11-12 17:26:44'),(10,'产品测试组','实测工程师，系统测试工程师',1,'2013-11-12 17:26:55'),(11,'项目管理组','配置工程师，项目助理，项目经理',1,'2013-11-12 17:27:05'),(12,'车云网产品线','车云网产品线(其他)，不知道是哪个组的',1,'2013-12-05 16:38:43'),(13,'车云网产品线(副总监)','车云网产品线(副总监)',1,'2014-01-09 14:11:17'),(14,'车云网产品线(总监)','车云网产品线(总监)',1,'2014-01-09 14:12:01'),(15,'资料翻译组','资料编写工程师，资料翻译工程师',1,'2014-01-09 14:13:05'),(16,'行政人事组','人事行政专员',1,'2014-01-09 14:13:40'),(17,'市场组','PLS，市场经理',1,'2014-01-09 14:16:35'),(18,'运维组','数据库工程师，运维工程师',1,'2014-01-09 14:18:15'),(19,'客户定制项目组','诊断软件首席工程师，ARM工程师，硬件工程师，系统工程师，单片机工程师，诊断程序工程师',1,'2014-01-09 14:22:58'),(20,'GOLO终端项目组','C++软件工程师，诊断软件首席工程师，ARM工程师，硬件工程师，系统工程师，单片机工程师，诊断程序工程师，android开发工程师',1,'2014-01-09 14:25:27'),(21,'协议开发项目组','汽车技术工程师，诊断协议工程师',1,'2014-01-09 14:26:12'),(22,'车云客户端IOS开发组','IOS开发工程师',1,'2014-01-09 14:26:43'),(23,'车云客户端Android开发组','Android开发工程师',1,'2014-01-09 14:26:59'),(10000,'总部_PLS','总部_PLS',1,'2014-04-01 19:43:47'),(40,'总部_产品测试组','总部软件测试诊断组',1,'2014-04-25 11:42:57'),(42,'海外市场中心','海外市场中心',9,'2014-04-29 17:38:51'),(44,'总部_网络销售部','总部_网络销售部',1,'2014-05-08 16:08:21'),(46,'总部_可靠性测试组','总部_可靠性测试组',1,'2014-05-16 10:13:30'),(48,'公众号应用组','公众号平台 管理',9,'2014-05-26 10:13:20');
+insert  into `role`(`id`,`name`,`description`,`created_user_id`,`created_on`,`modified_on`) values (1,'产品组','产品工程师，产品经理',1,'2013-09-24 20:24:30',NULL),(2,'管理员组','管理员组',1,'2013-09-24 20:24:37',NULL),(24,'总部_鹏奥达','总部_鹏奥达',9,'2014-01-14 14:31:27',NULL),(4,'设计组','网页重构师，视觉设计师，交互设计师',1,'2013-11-12 17:25:40',NULL),(5,'架构组','系统架构师',1,'2013-11-12 17:25:51',NULL),(6,'平台开发组','web前端开发工程师，后台开发工程师',1,'2013-11-12 17:26:09',NULL),(7,'应用开发组','web前端开发工程师，后台开发工程师',1,'2013-11-12 17:26:19',NULL),(8,'GOLO客户端iOS开发组','iOS开发工程师',1,'2013-11-12 17:26:30',NULL),(9,'GOLO客户端Android开发组','Android开发工程师',1,'2013-11-12 17:26:44',NULL),(10,'产品测试组','实测工程师，系统测试工程师',1,'2013-11-12 17:26:55',NULL),(11,'项目管理组','配置工程师，项目助理，项目经理',1,'2013-11-12 17:27:05',NULL),(12,'车云网产品线','车云网产品线(其他)，不知道是哪个组的',1,'2013-12-05 16:38:43',NULL),(13,'车云网产品线(副总监)','车云网产品线(副总监)',1,'2014-01-09 14:11:17',NULL),(14,'车云网产品线(总监)','车云网产品线(总监)',1,'2014-01-09 14:12:01',NULL),(15,'资料翻译组','资料编写工程师，资料翻译工程师',1,'2014-01-09 14:13:05',NULL),(16,'行政人事组','人事行政专员',1,'2014-01-09 14:13:40',NULL),(17,'市场组','PLS，市场经理',1,'2014-01-09 14:16:35',NULL),(18,'运维组','数据库工程师，运维工程师',1,'2014-01-09 14:18:15',NULL),(19,'客户定制项目组','诊断软件首席工程师，ARM工程师，硬件工程师，系统工程师，单片机工程师，诊断程序工程师',1,'2014-01-09 14:22:58',NULL),(20,'GOLO终端项目组','C++软件工程师，诊断软件首席工程师，ARM工程师，硬件工程师，系统工程师，单片机工程师，诊断程序工程师，android开发工程师',1,'2014-01-09 14:25:27',NULL),(21,'协议开发项目组','汽车技术工程师，诊断协议工程师',1,'2014-01-09 14:26:12',NULL),(22,'车云客户端IOS开发组','IOS开发工程师',1,'2014-01-09 14:26:43',NULL),(23,'车云客户端Android开发组','Android开发工程师',1,'2014-01-09 14:26:59',NULL),(10000,'总部_PLS','总部_PLS',1,'2014-04-01 19:43:47',NULL),(40,'总部_产品测试组','总部软件测试诊断组',1,'2014-04-25 11:42:57',NULL),(42,'海外市场中心','海外市场中心',9,'2014-04-29 17:38:51',NULL),(44,'总部_网络销售部','总部_网络销售部',1,'2014-05-08 16:08:21',NULL),(46,'总部_可靠性测试组','总部_可靠性测试组',1,'2014-05-16 10:13:30',NULL),(48,'公众号应用组','公众号平台 管理',9,'2014-05-26 10:13:20',NULL);
 
 /*Table structure for table `role_action` */
 
