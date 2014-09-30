@@ -1,0 +1,258 @@
+@charset "utf-8";
+/**新用户注册**/
+.regBox {
+	margin: 40px 0 0 0;
+	padding: 0 20px 20px 20px;
+	font-size: 16px;
+	overflow: hidden;
+	zoom: 1;
+}
+.regBox .aBox {
+	overflow: hidden;
+	zoom: 1;
+}
+.regBox .aBox .oneSetpImg {
+	margin: 0 auto;
+	width: 746px;
+	height: 90px;
+	background: url(../images/imgreg.gif) -5px -5px no-repeat;
+}
+.regBox .aBox .twoSetpImg {
+	margin: 0 auto;
+	width: 746px;
+	height: 90px;
+	background: url(../images/imgreg.gif) -5px -120px no-repeat;
+}
+.regBox .aBox .loginQuickLink {
+	padding-left: 50px;
+}
+.regBox .aBox .loginQuickLink a {
+	color: #1853AA;
+	text-decoration: none;
+}
+.regBox .aBox .loginQuickLink a:hover {
+	color: #FF9900;
+}
+.regBox .bBox {
+	margin-top: 15px;
+	padding-left: 50px;
+	height: 400px;
+}
+.regBox .bBox ul li {
+	margin: 5px 0;
+	height: 44px;
+	line-height: 44px;
+	vertical-align: middle;
+}
+.regBox .bBox .tLab {
+	display: block;
+	float: left;
+	width: 150px;
+	height: 44px;
+	line-height: 44px;
+	vertical-align: middle;
+	text-align: right;
+}
+.regBox .bBox .tLab i {
+	width: 10px;
+	height: 44px;
+	color: #F00;
+	font-style: normal;
+}
+.regBox .bBox .inputBox {
+	display: block;
+	float: left;
+	margin-right: 10px;
+	width: 269px;
+	height: 44px;
+	line-height: 44px;
+	vertical-align: middle;
+	border: 1px solid #c6c6c6;
+}
+.regBox .bBox .inputBox input.text {
+	width: 100%;
+	height: 30px;
+	font-size: 16px;
+	border: 0;
+}
+.regBox .bBox .inputBox input.textshort {
+	margin: 4px 0 0 10px;
+	width: 120px;
+	height: 30px;
+	font-size: 16px;
+	border: 0;
+}
+.regBox .bBox .errorTips {
+	float: left;
+	height: 44px;
+	padding-left: 15px;
+	background: url(../images/errortipsimg.gif) 0 18px no-repeat;
+	font-style: normal;
+	font-size: 14px;
+	color: #E96464;
+}
+.regBox .bBox .codeImg {
+	float: left;
+	display: block;
+	width: 160px;
+	height: 44px;
+	line-height: 44px;
+	vertical-align: middle;
+	font-size: 14px;
+}
+.regBox .bBox .codeImg a {
+	color: #1853AA;
+	text-decoration: none;
+}
+.regBox .bBox .codeImg a:hover {
+	color: #FF9900;
+}
+/*.regBox .bBox .name {
+	background: url(../images/imgreg.gif) -0px -244px no-repeat;
+}
+.regBox .bBox .phone {
+	background: url(../images/imgreg.gif) -0px -289px no-repeat;
+}
+.regBox .bBox .Email {
+	background: url(../images/imgreg.gif) -0px -334px no-repeat;
+}
+.regBox .bBox .password {
+	background: url(../images/imgreg.gif) -0px -379px no-repeat;
+}
+.regBox .bBox .referees {
+	background: url(../images/imgreg.gif) -0px -424px no-repeat;
+}
+.regBox .bBox .vericode {
+	background: url(../images/imgreg.gif) -0px -469px no-repeat;
+}*/
+.regBox .cBox {
+	overflow: hidden;
+	zoom: 1;
+}
+.regBox .cBox p {
+	padding-left: 200px;
+	overflow: hidden;
+	zoom: 1;
+}
+.regBox .cBox p a {
+	color: #1853AA;
+	text-decoration: none;
+}
+.regBox .cBox p a:hover {
+	color: #FF9900;
+}
+.regBox .cBox .b {
+	margin: 10px 0 0 0;
+}
+.regBox .cBox .btn-reg {
+	width: 269px;
+	height: 47px;
+	background: url(img/imgreg.gif) -280px -242px no-repeat;
+	cursor: pointer;
+	border: none;
+}
+.regBox .cBox .btn-reg:hover {
+	background: url(img/imgreg.gif) -550px -242px no-repeat;
+}
+.regBox .dBox {
+	margin-top: 15px;
+	height: 400px;
+	overflow: hidden;
+	zoom: 1;
+}
+.regBox .dBox p {
+	text-align: center;
+}
+.regBox .dBox p.title {
+	font-size: 24px;
+}
+.regBox .dBox p.a {
+	margin: 15px 0;
+}
+.regBox .dBox p.b {
+	line-height: 30px;
+}
+.regBox .dBox p.c {
+	margin: 20px 0;
+}
+.regBox .dBox p.d {
+	margin: 0 auto;
+	width: 650px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	color: #F60;
+	border: 1px dashed #F60;
+}
+.regBox .dBox p.e {
+	margin-top: 20px;
+}
+.regBox .dBox .btn-chrp {
+	width: 269px;
+	height: 47px;
+	background: url(img/imgreg.gif) -280px -336px no-repeat;
+	cursor: pointer;
+	border: none;
+}
+.regBox .dBox .btn-chrp:hover {
+	background: url(img/imgreg.gif) -550px -336px no-repeat;
+}
+/*提示CSS*/
+.tip-yellowsimple {
+	z-index: 1000;
+	text-align: left;
+	border: 1px solid #c7bf93;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding: 6px 8px;
+	min-width: 50px;
+	max-width: 300px;
+	color: #000;
+	background-color: #fff9c9;/**
+	 * - If you set a background-image, border/padding/background-color will be ingnored.
+	 *   You can set any padding to .tip-inner instead if you need.
+	 * - If you want a tiled background-image and border/padding for the tip,
+	 *   set the background-image to .tip-inner instead.
+	 */
+}
+.tip-yellowsimple .tip-inner {
+	font: 12px/16px arial, helvetica, sans-serif;
+}
+/* Configure an arrow image - the script will automatically position it on the correct side of the tip */
+.tip-yellowsimple .tip-arrow-top {
+	margin-top: -6px;
+	margin-left: -5px; /* approx. half the width to center it */
+	top: 0;
+	left: 50%;
+	width: 9px;
+	height: 6px;
+	background: url(img/tip-yellowsimple_arrows.gif) no-repeat;
+}
+.tip-yellowsimple .tip-arrow-right {
+	margin-top: -4px; /* approx. half the height to center it */
+	margin-left: 0;
+	top: 50%;
+	left: 100%;
+	width: 6px;
+	height: 9px;
+	background: url(img/tip-yellowsimple_arrows.gif) no-repeat -9px 0;
+}
+.tip-yellowsimple .tip-arrow-bottom {
+	margin-top: 0;
+	margin-left: -5px; /* approx. half the width to center it */
+	top: 100%;
+	left: 50%;
+	width: 9px;
+	height: 6px;
+	background: url(img/tip-yellowsimple_arrows.gif) no-repeat -18px 0;
+}
+.tip-yellowsimple .tip-arrow-left {
+	margin-top: -4px; /* approx. half the height to center it */
+	margin-left: -6px;
+	top: 50%;
+	left: 0;
+	width: 6px;
+	height: 9px;
+	background: url(img/tip-yellowsimple_arrows.gif) no-repeat -27px 0;
+}

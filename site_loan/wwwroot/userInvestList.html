@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://www.anxinjudai.com/member/investmentrecord.html -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>安信聚贷-会员中心-我的投资</title>
+<link href="css/ligerui-all.css" rel="stylesheet" type="text/css">
+<link href="css/ligerui-icons.css" rel="stylesheet" type="text/css">
+<link href="css/all.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script src="js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script src="js/base.js" type="text/javascript"></script>
+<script src="js/ligerResizable.js" type="text/javascript"></script>
+<script src="js/ligerDrag.js" type="text/javascript"></script>
+<script src="js/ligerComboBox.js" type="text/javascript"></script>
+<script src="js/ligerForm.js" type="text/javascript"></script>
+<script src="js/ligerDateEditor.js" type="text/javascript"></script>
+<script src="js/ligerTextBox.js" type="text/javascript"></script>
+<script src="js/ligerTip.js" type="text/javascript"></script>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="js/jquery.metadata.js" type="text/javascript"></script>
+<script src="js/messages_cn.js" type="text/javascript"></script>
+<script src="js/jquery.validate.ext.js" type="text/javascript"></script>
+<script src="js/validate1.js" type="text/javascript"></script>
+<script language="javascript">
+    jQuery.validator.methods.compareDate = function (value, element, param) {
+        //var startDate = jQuery(param).val() + ":00";补全yyyy-MM-dd HH:mm:ss格式
+        //value = value + ":00";
+        var startDate = jQuery(param).val();
+        if (startDate != "" && value != "") {
+            var date1 = new Date(Date.parse(startDate.replace("-", "/")));
+            var date2 = new Date(Date.parse(value.replace("-", "/")));
+            return date1 < date2;
+        } else
+            return true;
+    };
+</script>
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css">
+<script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script>
+</head>
+<body screen_capture_injected="true">
+<div class="main">
+  <form name="form1" method="post" id="form1" ligeruiid="form1">
+    <div>
+      <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="">
+    </div>
+    <div>
+      <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="">
+    </div>
+    
+    <!-- header start -->
+    <div class="header">
+      <div class="header-box o_a c_f">
+        <h1 class="logo"></h1>
+        <div class="hd-operate f_r">
+          <ul class="user c_f">
+            <li>您好，<a href="user.html">15899677750</a></li>|
+            <li><a href="index.html">退出</a></li>
+          </ul>
+          <div style="clear: both;"></div>
+          <ul class="nav c_f">
+            <li><a href="index.html">品盛首页</a></li>
+            <li><a href="invest.html">我要投资</a></li>
+            <li><a href="borrow.html">我要借款</a></li>
+            <li><a href="guide.html">新手指南</a></li>
+            <li><a href="about.html">关于品盛</a></li>
+            <li><a href="forum.html">品盛社区</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- header end -->
+
+    <div class="HuoTai">
+      <table width="994" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="11" valign="top" bgcolor="#F2F2F2"><img src="images/ht_left.png" width="11"></td>
+          <td width="186" valign="top">
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="3"></td>
+              </tr>
+            </table>
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="54" background="images/ht_lef.png"><span style="color: #FFF; font-size: 18px; padding-left: 45px; font-weight: bold;">会员中心</span></td>
+              </tr>
+            </table>
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="40" height="40" align="center"><img src="images/tb7.gif" width="16" height="16"></td>
+                <td align="left" style="color: #5894E4; font-size: 16px;"> 个人账户 </td>
+              </tr>
+            </table>
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HuoTai_td"><a href="">账户总览</a></td>
+              </tr>
+              <tr style="display:none;">
+                <td class="HuoTai_td"><a target="_blank" href="">资金托管账户</a></td>
+              </tr>
+              <tr>
+                <td class="HuoTai_td"><a href="">个人信息</a></td>
+              </tr>
+              <tr>
+                <td class="HuoTai_td"><a href="" target="_blank">托管账户信息</a></td>
+              </tr>
+            </table>
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="40" height="40" align="center"><img src="images/tb7.gif" width="16" height="16"></td>
+                <td align="left" style="color: #5894E4; font-size: 16px;">第三方交易</td>
+              </tr>
+            </table>
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HuoTai_td"><a href="" target="_blank">第三方交易</a></td>
+              </tr>
+              <tr>
+                <td class="HuoTai_td"><a href="">第三方流水</a></td>
+              </tr>
+              <tr>
+                <td class="HuoTai_td"><a href="">第三方介绍</a></td>
+              </tr>
+            </table>
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="40" height="40" align="center"><img src="images/tb2.gif" width="16" height="16"></td>
+                <td align="left" style="color: #5894E4; font-size: 16px;"> 资金管理 </td>
+              </tr>
+            </table>
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HuoTai_td"><a href="">我要充值</a></td>
+              </tr>
+              <tr>
+                <td class="HuoTai_td"><a href="">充值记录</a></td>
+              </tr>
+              <tr>
+                <td class="HuoTai_td"><a href="">我要提现</a></td>
+              </tr>
+              <tr>
+                <td class="HuoTai_td"><a href="">提现记录</a></td>
+              </tr>
+              <tr>
+                <td class="HuoTai_td"><a href="">资金流水</a></td>
+              </tr>
+              <tr>
+                <td class="HuoTai_td"><a href="">绑定银行卡</a></td>
+              </tr>
+            </table>
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="40" height="40" align="center"><img src="images/tb3.gif" width="16" height="16"></td>
+                <td align="left" style="color: #5894E4; font-size: 16px;"> 投资管理 </td>
+              </tr>
+            </table>
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HuoTai_td"><a href="">我的投资</a></td>
+              </tr>
+              <tr>
+                <td class="HuoTai_td"><a href="">投资统计</a></td>
+              </tr>
+            </table>
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="40" height="40" align="center"><img src="images/tb4.gif" width="16" height="16"></td>
+                <td align="left" style="color: #5894E4; font-size: 16px;"> 贷款管理 </td>
+              </tr>
+            </table>
+            <table width="186" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HuoTai_td"><a href="">我的贷款</a></td>
+              </tr>
+              <tr>
+                <td class="HuoTai_td"><a href="">贷款统计</a></td>
+              </tr>
+            </table>
+          </td>
+          <td width="1" bgcolor="#EEEEEE"></td>
+          <td valign="top">
+            <div id="hr_ConLabel">
+              <ul>
+                <li id="item0"><a href="">竞标中</a></li>
+                <li id="item1" class="On"><a href="">收款中</a></li>
+                <li id="item2"><a href="">收款结束</a></li>
+              </ul>
+            </div>
+            <div style="margin-left: 6px;">
+              <div class="l-labeltext" style="width: 242px;">
+                <div class="l-text-label" style="float: left; display: inline; width: 60px; height: 20px; text-align: left;">投资时间:&nbsp;</div>
+                <div class="l-text-wrapper" style="float: left; display: inline; width: 178px;">
+                  <div class="l-text l-text-date" style="width: 178px;">
+                    <input name="txtStartDate" type="text" id="txtStartDate" ltype="date" ligerui="{&quot;label&quot;:&quot;投资时间&quot;,&quot;labelWidth&quot;:60,&quot;labelAlign&quot;:&quot;left&quot;,&quot;readonly&quot;:false,&quot;value&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;format&quot;:&quot;yyyy-MM-dd&quot;,&quot;showTime&quot;:true,&quot;cancelable&quot;:true}" class="l-text-field" ligeruiid="txtStartDate" style="width: 158px;">
+                    <div class="l-text-l"></div>
+                    <div class="l-text-r"></div>
+                    <div class="l-trigger">
+                      <div class="l-trigger-icon"></div>
+                    </div>
+                    <div class="l-trigger l-trigger-cancel" style="display: none;">
+                      <div class="l-trigger-icon"></div>
+                    </div>
+                  </div>
+                </div>
+                <br style="clear:both;">
+              </div>
+              <div class="l-labeltext" style="width: 202px;">
+                <div class="l-text-label" style="float: left; display: inline; width: 20px; height: 20px; text-align: left;">到:&nbsp;</div>
+                <div class="l-text-wrapper" style="float: left; display: inline; width: 178px;">
+                  <div class="l-text l-text-date" style="width: 178px;">
+                    <input name="txtEndDate" type="text" id="txtEndDate" validate="{compareDate:&#39;#txtStartDate&#39;,messages:{compareDate:&#39;结束日期选择不正确&#39;}}" ltype="date" ligerui="{&quot;label&quot;:&quot;到&quot;,&quot;labelWidth&quot;:20,&quot;labelAlign&quot;:&quot;left&quot;,&quot;readonly&quot;:false,&quot;value&quot;:&quot;&quot;,&quot;disabled&quot;:false,&quot;format&quot;:&quot;yyyy-MM-dd&quot;,&quot;showTime&quot;:true,&quot;cancelable&quot;:true}" class="l-text-field" ligeruiid="txtEndDate" style="width: 158px;">
+                    <div class="l-text-l"></div>
+                    <div class="l-text-r"></div>
+                    <div class="l-trigger">
+                      <div class="l-trigger-icon"></div>
+                    </div>
+                    <div class="l-trigger l-trigger-cancel" style="display: none;">
+                      <div class="l-trigger-icon"></div>
+                    </div>
+                  </div>
+                </div>
+                <br style="clear:both;">
+              </div>
+              <input type="submit" name="btnQuery" value="查询" id="btnQuery" class="queryBtn">
+            </div>
+            <div class="TableList" style="margin: 4px;">
+              <table width="770" border="0" cellspacing="0" cellpadding="0" style="text-align:center;">
+                <thead>
+                  <tr>
+                    <th> 标的编号 </th>
+                    <th> 期数 </th>
+                    <th> 投资金额(元) </th>
+                    <th> 预计总收益(元) </th>
+                    <th> 已收本金(元) </th>
+                    <th> 已收利息(元) </th>
+                    <th> 下期收款日期 </th>
+                    <th> 详细账单 </th>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;">1</td>
+                    <td style="padding:10px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;">1</td>
+                    <td style="padding:10px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;">10</td>
+                    <td style="padding:10px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;">10</td>
+                    <td style="padding:10px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;">10</td>
+                    <td style="padding:10px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;">10</td>
+                    <td style="padding:10px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;">2014-01-01 12:00</td>
+                    <td style="padding:10px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;">10</td>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="Clear"></div>
+            <div id="ShowPage" style="margin-top: 2px;"> 
+                
+              <!-- AspNetPager 7.3.2  Copyright:2003-2010 Webdiyer (www.webdiyer.com) -->
+              <div id="paging" class="paginator"> 
+                <a disabled="disabled" style="margin-right:5px;">首页</a>
+                <a disabled="disabled" style="margin-right:5px;">上一页</a>
+                <span class="cpb" style="margin-right:5px;">1</span>
+                <a disabled="disabled" style="margin-right:5px;">下一页</a>
+                <a disabled="disabled" style="margin-right:5px;">尾页</a> 
+              </div>
+              <!-- AspNetPager 7.3.2  Copyright:2003-2010 Webdiyer (www.webdiyer.com) --> 
+              
+            </div>
+            <div class="Clear"></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="Clear"></div>
+
+    <!-- footer start -->
+    <div class="footer">
+      <p><a href="">关于我们</a> | <a href="">招贤纳士</a> | <a href="">联系我们</a></p>
+      <p>Copyright &copy; 2013-2013 东莞市品盛实业投资有限公司 版权所有</p>
+    </div>
+    <!-- footer end -->
+  </form>
+    </div>
+<div class="l-box-dateeditor l-box-dateeditor-absolute" style="display:none">
+      <div class="l-box-dateeditor-header">
+    <div class="l-box-dateeditor-header-btn l-box-dateeditor-header-prevyear"><span></span></div>
+    <div class="l-box-dateeditor-header-btn l-box-dateeditor-header-prevmonth"><span></span></div>
+    <div class="l-box-dateeditor-header-text"><a class="l-box-dateeditor-header-month">九月</a> , <a class="l-box-dateeditor-header-year">2014</a></div>
+    <div class="l-box-dateeditor-header-btn l-box-dateeditor-header-nextmonth"><span></span></div>
+    <div class="l-box-dateeditor-header-btn l-box-dateeditor-header-nextyear"><span></span></div>
+  </div>
+      <div class="l-box-dateeditor-body">
+    <table cellpadding="0" cellspacing="0" border="0" class="l-box-dateeditor-calendar">
+          <thead>
+        <tr>
+              <td align="center">日</td>
+              <td align="center">一</td>
+              <td align="center">二</td>
+              <td align="center">三</td>
+              <td align="center">四</td>
+              <td align="center">五</td>
+              <td align="center">六</td>
+            </tr>
+      </thead>
+          <tbody>
+        <tr class="l-first">
+              <td align="center" class="l-box-dateeditor-out">31</td>
+              <td align="center" class="">1</td>
+              <td align="center" class="">2</td>
+              <td align="center" class="">3</td>
+              <td align="center" class="">4</td>
+              <td align="center" class="">5</td>
+              <td align="center" class="l-box-dateeditor-holiday">6</td>
+            </tr>
+        <tr>
+              <td align="center" class="l-box-dateeditor-holiday">7</td>
+              <td align="center" class="">8</td>
+              <td align="center" class="">9</td>
+              <td align="center" class="">10</td>
+              <td align="center" class="">11</td>
+              <td align="center" class="">12</td>
+              <td align="center" class="l-box-dateeditor-holiday">13</td>
+            </tr>
+        <tr>
+              <td align="center" class="l-box-dateeditor-holiday">14</td>
+              <td align="center" class="">15</td>
+              <td align="center" class="">16</td>
+              <td align="center" class="">17</td>
+              <td align="center" class="">18</td>
+              <td align="center" class="">19</td>
+              <td align="center" class="l-box-dateeditor-holiday">20</td>
+            </tr>
+        <tr>
+              <td align="center" class="l-box-dateeditor-holiday">21</td>
+              <td align="center" class="">22</td>
+              <td align="center" class="">23</td>
+              <td align="center" class="">24</td>
+              <td align="center" class="">25</td>
+              <td align="center" class="">26</td>
+              <td align="center" class="l-box-dateeditor-holiday">27</td>
+            </tr>
+        <tr>
+              <td align="center" class="l-box-dateeditor-holiday l-box-dateeditor-today">28</td>
+              <td align="center" class="">29</td>
+              <td align="center" class="">30</td>
+              <td align="center" class="l-box-dateeditor-out">1</td>
+              <td align="center" class="l-box-dateeditor-out">2</td>
+              <td align="center" class="l-box-dateeditor-out">3</td>
+              <td align="center" class="l-box-dateeditor-out">4</td>
+            </tr>
+        <tr>
+              <td align="center" class="l-box-dateeditor-out">5</td>
+              <td align="center" class="l-box-dateeditor-out">6</td>
+              <td align="center" class="l-box-dateeditor-out">7</td>
+              <td align="center" class="l-box-dateeditor-out">8</td>
+              <td align="center" class="l-box-dateeditor-out">9</td>
+              <td align="center" class="l-box-dateeditor-out">10</td>
+              <td align="center" class="l-box-dateeditor-out">11</td>
+            </tr>
+      </tbody>
+        </table>
+    <ul class="l-box-dateeditor-monthselector">
+          <li>一月</li>
+          <li>二月</li>
+          <li>三月</li>
+          <li>四月</li>
+          <li>五月</li>
+          <li>六月</li>
+          <li>七月</li>
+          <li>八月</li>
+          <li>九月</li>
+          <li>十月</li>
+          <li>十一月</li>
+          <li>十二月</li>
+        </ul>
+    <ul class="l-box-dateeditor-yearselector">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+    <ul class="l-box-dateeditor-hourselector">
+          <li>00</li>
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+          <li>04</li>
+          <li>05</li>
+          <li>06</li>
+          <li>07</li>
+          <li>08</li>
+          <li>09</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+        </ul>
+    <ul class="l-box-dateeditor-minuteselector">
+          <li>00</li>
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+          <li>04</li>
+          <li>05</li>
+          <li>06</li>
+          <li>07</li>
+          <li>08</li>
+          <li>09</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+          <li>32</li>
+          <li>33</li>
+          <li>34</li>
+          <li>35</li>
+          <li>36</li>
+          <li>37</li>
+          <li>38</li>
+          <li>39</li>
+          <li>40</li>
+          <li>41</li>
+          <li>42</li>
+          <li>43</li>
+          <li>44</li>
+          <li>45</li>
+          <li>46</li>
+          <li>47</li>
+          <li>48</li>
+          <li>49</li>
+          <li>50</li>
+          <li>51</li>
+          <li>52</li>
+          <li>53</li>
+          <li>54</li>
+          <li>55</li>
+          <li>56</li>
+          <li>57</li>
+          <li>58</li>
+          <li>59</li>
+        </ul>
+  </div>
+      <div class="l-box-dateeditor-toolbar">
+    <div class="l-box-dateeditor-time" style="display: block;"><a>17</a>:<a>24</a></div>
+    <div class="l-button l-button-today">今天</div>
+    <div class="l-button l-button-close">关闭</div>
+    <div class="l-clear"></div>
+  </div>
+    </div>
+<div class="l-box-dateeditor l-box-dateeditor-absolute" style="display:none">
+      <div class="l-box-dateeditor-header">
+    <div class="l-box-dateeditor-header-btn l-box-dateeditor-header-prevyear"><span></span></div>
+    <div class="l-box-dateeditor-header-btn l-box-dateeditor-header-prevmonth"><span></span></div>
+    <div class="l-box-dateeditor-header-text"><a class="l-box-dateeditor-header-month">九月</a> , <a class="l-box-dateeditor-header-year">2014</a></div>
+    <div class="l-box-dateeditor-header-btn l-box-dateeditor-header-nextmonth"><span></span></div>
+    <div class="l-box-dateeditor-header-btn l-box-dateeditor-header-nextyear"><span></span></div>
+  </div>
+      <div class="l-box-dateeditor-body">
+    <table cellpadding="0" cellspacing="0" border="0" class="l-box-dateeditor-calendar">
+          <thead>
+        <tr>
+              <td align="center">日</td>
+              <td align="center">一</td>
+              <td align="center">二</td>
+              <td align="center">三</td>
+              <td align="center">四</td>
+              <td align="center">五</td>
+              <td align="center">六</td>
+            </tr>
+      </thead>
+          <tbody>
+        <tr class="l-first">
+              <td align="center" class="l-box-dateeditor-out">31</td>
+              <td align="center" class="">1</td>
+              <td align="center" class="">2</td>
+              <td align="center" class="">3</td>
+              <td align="center" class="">4</td>
+              <td align="center" class="">5</td>
+              <td align="center" class="l-box-dateeditor-holiday">6</td>
+            </tr>
+        <tr>
+              <td align="center" class="l-box-dateeditor-holiday">7</td>
+              <td align="center" class="">8</td>
+              <td align="center" class="">9</td>
+              <td align="center" class="">10</td>
+              <td align="center" class="">11</td>
+              <td align="center" class="">12</td>
+              <td align="center" class="l-box-dateeditor-holiday">13</td>
+            </tr>
+        <tr>
+              <td align="center" class="l-box-dateeditor-holiday">14</td>
+              <td align="center" class="">15</td>
+              <td align="center" class="">16</td>
+              <td align="center" class="">17</td>
+              <td align="center" class="">18</td>
+              <td align="center" class="">19</td>
+              <td align="center" class="l-box-dateeditor-holiday">20</td>
+            </tr>
+        <tr>
+              <td align="center" class="l-box-dateeditor-holiday">21</td>
+              <td align="center" class="">22</td>
+              <td align="center" class="">23</td>
+              <td align="center" class="">24</td>
+              <td align="center" class="">25</td>
+              <td align="center" class="">26</td>
+              <td align="center" class="l-box-dateeditor-holiday">27</td>
+            </tr>
+        <tr>
+              <td align="center" class="l-box-dateeditor-holiday l-box-dateeditor-today">28</td>
+              <td align="center" class="">29</td>
+              <td align="center" class="">30</td>
+              <td align="center" class="l-box-dateeditor-out">1</td>
+              <td align="center" class="l-box-dateeditor-out">2</td>
+              <td align="center" class="l-box-dateeditor-out">3</td>
+              <td align="center" class="l-box-dateeditor-out">4</td>
+            </tr>
+        <tr>
+              <td align="center" class="l-box-dateeditor-out">5</td>
+              <td align="center" class="l-box-dateeditor-out">6</td>
+              <td align="center" class="l-box-dateeditor-out">7</td>
+              <td align="center" class="l-box-dateeditor-out">8</td>
+              <td align="center" class="l-box-dateeditor-out">9</td>
+              <td align="center" class="l-box-dateeditor-out">10</td>
+              <td align="center" class="l-box-dateeditor-out">11</td>
+            </tr>
+      </tbody>
+        </table>
+    <ul class="l-box-dateeditor-monthselector">
+          <li>一月</li>
+          <li>二月</li>
+          <li>三月</li>
+          <li>四月</li>
+          <li>五月</li>
+          <li>六月</li>
+          <li>七月</li>
+          <li>八月</li>
+          <li>九月</li>
+          <li>十月</li>
+          <li>十一月</li>
+          <li>十二月</li>
+        </ul>
+    <ul class="l-box-dateeditor-yearselector">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+    <ul class="l-box-dateeditor-hourselector">
+          <li>00</li>
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+          <li>04</li>
+          <li>05</li>
+          <li>06</li>
+          <li>07</li>
+          <li>08</li>
+          <li>09</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+        </ul>
+    <ul class="l-box-dateeditor-minuteselector">
+          <li>00</li>
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+          <li>04</li>
+          <li>05</li>
+          <li>06</li>
+          <li>07</li>
+          <li>08</li>
+          <li>09</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+          <li>32</li>
+          <li>33</li>
+          <li>34</li>
+          <li>35</li>
+          <li>36</li>
+          <li>37</li>
+          <li>38</li>
+          <li>39</li>
+          <li>40</li>
+          <li>41</li>
+          <li>42</li>
+          <li>43</li>
+          <li>44</li>
+          <li>45</li>
+          <li>46</li>
+          <li>47</li>
+          <li>48</li>
+          <li>49</li>
+          <li>50</li>
+          <li>51</li>
+          <li>52</li>
+          <li>53</li>
+          <li>54</li>
+          <li>55</li>
+          <li>56</li>
+          <li>57</li>
+          <li>58</li>
+          <li>59</li>
+        </ul>
+  </div>
+      <div class="l-box-dateeditor-toolbar">
+    <div class="l-box-dateeditor-time" style="display: block;"><a>17</a>:<a>24</a></div>
+    <div class="l-button l-button-today">今天</div>
+    <div class="l-button l-button-close">关闭</div>
+    <div class="l-clear"></div>
+  </div>
+    </div>
+</body>
+</html>
