@@ -5,9 +5,9 @@ $default_id_maker = array(
 	'start' => '1',
 );
 
-$project_id_make = array(
+$person_id_make = array(
 	'maker' => '\App\Api\Dao\IdMakerTable',
-	'name' => 'project',
+	'name' => 'person',
 	'start' => '1',
 );
 
@@ -89,7 +89,7 @@ return array(
 	'default' => $default_id_maker,
 	'user' => $user_id_make,
 	'dept' => $dept_make,
-	'project' => $project_id_make,
+	'person' => $person_id_make,
 	'role' => $role_id_make,
 	'version' => $version_id_make,
 	'comment' => $comment_id_make,
