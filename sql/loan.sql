@@ -3,7 +3,8 @@ SQLyog Enterprise - MySQL GUI v6.03
 Host - 5.5.23 : Database - loan
 *********************************************************************
 Server version : 5.5.23
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
