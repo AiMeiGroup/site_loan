@@ -19,7 +19,7 @@ class Index extends \Lavender\WebPage
 	public function index_action()
 	{
 
-		$this->redirect("?action=home.index");
+		$this->redirect("?action=login.login");
 	}
 
 

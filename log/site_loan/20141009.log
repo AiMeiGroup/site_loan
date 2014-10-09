@@ -1,0 +1,132 @@
+2014-10-09 10:11:42	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:index/index
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#2 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-10-09 10:11:42	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#3 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-10-09 10:11:42	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:login/logon
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('logon')
+#2 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-10-09 10:11:42	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('logon')
+#3 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-10-09 10:11:50	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:index/index
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#2 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-10-09 10:11:50	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#3 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-10-09 10:11:50	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:login/logon
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('logon')
+#2 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-10-09 10:11:50	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('logon')
+#3 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-10-09 10:12:02	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:index/index
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#2 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-10-09 10:12:02	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#3 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-10-09 10:12:02	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:login/logon
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('logon')
+#2 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-10-09 10:12:02	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('logon')
+#3 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-10-09 10:12:26	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:index/index
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#2 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-10-09 10:12:26	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#3 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-10-09 10:12:26	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:login/logon
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('logon')
+#2 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-10-09 10:12:26	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('logon')
+#3 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-10-09 10:12:54	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:index/index
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#2 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-10-09 10:12:54	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#3 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-10-09 10:13:32	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:index/index
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#2 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-10-09 10:13:32	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#3 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}
+2014-10-09 11:03:29	C:\ld\git\php\site_loan\lavender\Db\Mysql.php(55)	1402	database connect failed,code:2002,msg:No connection could be made because the target machine actively refused it.
+
+#0 C:\ld\git\php\site_loan\lavender\Db\Mysql.php(422): Lavender\Db\Mysql->open()
+#1 C:\ld\git\php\site_loan\lavender\Dao\Table.php(324): Lavender\Db\Mysql->escape('28ead48996a4ca9...')
+#2 C:\ld\git\php\site_loan\site_loan\Api\Dao\UserTable.php(22): Lavender\Dao\Table->build_condition(NULL, Array)
+#3 C:\ld\git\php\site_loan\site_loan\Api\UserManage.php(215): App\Api\Dao\UserTable->get(NULL, Array, Array)
+#4 C:\ld\git\php\site_loan\site_loan\Action\login.php(37): App\Api\UserManage::bol_login_valid('fsa', '28ead48996a4ca9...')
+#5 C:\ld\git\php\site_loan\lavender\WebPage.php(132): App\Action\login->logon_action()
+#6 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('logon')
+#7 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#8 {main}
+2014-10-09 15:35:10	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:index/index
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(135): Lavender\WebPage->render(NULL)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#2 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#3 {main}
+2014-10-09 15:35:10	C:\ld\git\php\site_loan\lavender\WebPage.php(190)	1301	View not found:common/error
+#0 C:\ld\git\php\site_loan\lavender\WebPage.php(202): Lavender\WebPage->render(Array)
+#1 C:\ld\git\php\site_loan\lavender\WebPage.php(142): Lavender\WebPage->render_error('View not found:...', 1301)
+#2 C:\ld\git\php\site_loan\lavender\WebPage.php(82): Lavender\WebPage->execute('index')
+#3 C:\ld\git\php\site_loan\site_loan\wwwroot\index.php(22): Lavender\WebPage::run(Array)
+#4 {main}

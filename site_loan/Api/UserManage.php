@@ -1,4 +1,4 @@
- <?php 
+<?php 
 
 namespace App\Api;
 
@@ -85,7 +85,7 @@ class UserManage
 			if (isset($email)) {
 				$arr["email"] = $email;
 			}
-			$arr["modified_on"] = date('Y-m-d H:i:s', time());
+//			$arr["modified_on"] = date('Y-m-d H:i:s', time());
 			return Dao\UserTable::instance()->update($id, $arr);
 		} catch (Exception $e) {
 			throw($e);
@@ -104,7 +104,7 @@ class UserManage
 			if (isset($name)) {
 				$filtes["name"] = $name;
 			}
-			$filds = array('id', 'username', 'name', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'created_on', 'modified_on');
+			$filds = array('id', 'username', 'name', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'created_on');
 			return UserTable::instance()->get($id, $filds, $filtes, $order, $offset, $length);
 		} catch (Exception $e) {
 			throw($e);
@@ -126,7 +126,7 @@ class UserManage
 			if (isset($username)) {
 				$filtes["username"] = $username;
 			}
-			$filds = array('id', 'username', 'name', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'created_on', 'modified_on');
+			$filds = array('id', 'username', 'name', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'created_on');
 			return UserTable::instance()->get($id, $filds, $filtes, $order, $offset, $length);
 		} catch (Exception $e) {
 			throw($e);
@@ -146,7 +146,7 @@ class UserManage
 			if (isset($username)) {
 				$filtes["username"] = $username;
 			}
-			$filds = array('id', 'username', 'name', 'dept_id', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'created_on', 'modified_on');
+			$filds = array('id', 'username', 'name', 'role_id', 'mobile', 'email', 'status', 'create_user_id', 'created_on');
 			return UserTable::instance()->count($id, $filtes);
 		} catch (Exception $e) {
 			throw($e);
@@ -161,7 +161,7 @@ class UserManage
 		try {
 
 			$filtes["username"] = $username;
-			$filds = array('id', 'username', 'name','role_id', 'mobile', 'email', 'status', 'created_user_id', 'created_on', 'modified_on');
+			$filds = array('id', 'username', 'name','role_id', 'mobile', 'email', 'status', 'created_user_id');
 			return UserTable::instance()->get(null, $filds, $filtes);
 		} catch (Exception $e) {
 			throw($e);
