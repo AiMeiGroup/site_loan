@@ -4,7 +4,7 @@
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="icon" href="http://www.anxinjudai.com/favicon.ico" type="image/x-icon">
-    <title>安信聚贷—安全诚信的P2P金融网贷服务平台</title>
+    <title>品盛金融—安全诚信的P2P金融网贷服务平台</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>

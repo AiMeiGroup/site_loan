@@ -7,7 +7,7 @@ echo($LANG);
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>loan-用户登录</title>
+	<title>品盛金融—安全诚信的P2P金融网贷服务平台</title>
 	<link href="css/main.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/layout.css"/>
