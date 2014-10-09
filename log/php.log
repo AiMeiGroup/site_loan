@@ -7569,3 +7569,76 @@ passed to App\Api\Dao\UserTable::get() must be of the type array, null given, ca
 14-09-13 16:54:38	C:\ld\github\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\github\site_loan\app/view/index/index.php' for inclusion (include_path='.;C:\ld\PHP\xampp\php\PEAR')
 14-09-13 16:54:38	C:\ld\github\site_loan\lavender\WebPage.php:189	2	include(C:\ld\github\site_loan\app/view/common/error.php): failed to open stream: No such file or directory
 14-09-13 16:54:38	C:\ld\github\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\github\site_loan\app/view/common/error.php' for inclusion (include_path='.;C:\ld\PHP\xampp\php\PEAR')
+14-10-08 13:40:45	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/index/index.php): failed to open stream: No such file or directory
+14-10-08 13:40:45	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/index/index.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:40:45	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 13:40:45	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:50:48	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 13:50:48	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:50:48	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 13:50:48	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:57:35	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 13:57:35	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:57:35	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 13:57:35	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:57:36	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 13:57:36	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:57:36	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 13:57:36	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:57:37	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 13:57:37	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:57:37	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 13:57:37	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:58:42	C:\ld\git\php\site_loan\site_loan\Action\login.php:33	8	Undefined index: username
+14-10-08 13:58:42	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 13:58:42	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:58:42	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 13:58:42	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:58:44	C:\ld\git\php\site_loan\site_loan\Action\login.php:33	8	Undefined index: username
+14-10-08 13:58:44	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 13:58:44	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:58:44	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 13:58:44	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:59:19	C:\ld\git\php\site_loan\site_loan\Action\login.php:33	8	Undefined index: username
+14-10-08 13:59:19	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 13:59:19	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:59:19	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 13:59:19	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:59:41	C:\ld\git\php\site_loan\site_loan\Action\login.php:33	8	Undefined index: username
+14-10-08 13:59:41	C:\ld\git\php\site_loan\site_loan\Action\login.php:34	8	Undefined index: username
+14-10-08 13:59:41	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 13:59:41	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:59:41	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 13:59:41	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:59:42	C:\ld\git\php\site_loan\site_loan\Action\login.php:33	8	Undefined index: username
+14-10-08 13:59:42	C:\ld\git\php\site_loan\site_loan\Action\login.php:34	8	Undefined index: username
+14-10-08 13:59:42	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 13:59:42	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:59:42	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 13:59:42	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:59:43	C:\ld\git\php\site_loan\site_loan\Action\login.php:33	8	Undefined index: username
+14-10-08 13:59:43	C:\ld\git\php\site_loan\site_loan\Action\login.php:34	8	Undefined index: username
+14-10-08 13:59:43	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 13:59:43	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 13:59:43	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 13:59:43	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 14:01:01	C:\ld\git\php\site_loan\site_loan\Action\login.php:33	8	Undefined index: username
+14-10-08 14:01:01	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 14:01:01	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 14:01:01	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 14:01:01	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 14:01:22	C:\ld\git\php\site_loan\site_loan\Action\login.php:33	8	Undefined index: username
+14-10-08 14:01:22	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 14:01:22	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 14:01:22	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 14:01:22	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 14:01:29	C:\ld\git\php\site_loan\site_loan\Action\login.php:33	8	Undefined index: username
+14-10-08 14:01:29	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 14:01:29	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 14:01:29	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 14:01:29	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 14:01:31	C:\ld\git\php\site_loan\site_loan\Action\login.php:33	8	Undefined index: username
+14-10-08 14:01:31	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/login/logon.php): failed to open stream: No such file or directory
+14-10-08 14:01:31	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/login/logon.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')
+14-10-08 14:01:31	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(C:\ld\git\php\site_loan\site_loan/view/common/error.php): failed to open stream: No such file or directory
+14-10-08 14:01:31	C:\ld\git\php\site_loan\lavender\WebPage.php:189	2	include(): Failed opening 'C:\ld\git\php\site_loan\site_loan/view/common/error.php' for inclusion (include_path='.;C:\ld\xampp\php\PEAR')

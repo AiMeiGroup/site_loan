@@ -29,6 +29,9 @@ class login extends \Lavender\WebPage
 
 	public function  logon_action()
 	{
+
+echo($_POST["username"]);
+echo($_GET["username"]);
 		try {
 			if (isset($_POST["username"]) && isset($_POST["userpsw"])) {
 				if (UserManage::bol_login_valid($_POST["username"], sha1($_POST["userpsw"]))) {
