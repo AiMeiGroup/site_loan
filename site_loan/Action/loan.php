@@ -23,12 +23,12 @@ class Loan extends \Lavender\WebPage
 	public function  index_action()
 	{
 
-        $params['size']=10;
+/*        $params['size']=10;
         $count=LoanManage::get_data_count();
         $listrow=LoanManage::get
         $Page=new common\Page($count,$listrow,null,'action=loan.index'); // 实例化分页类 传入总记录数
         $show=$page->show(); // 分页显示输出
-        return array('data'=>$data,'page'=>$show);
+        return array('data'=>$data,'page'=>$show);*/
 	}
 
 }
