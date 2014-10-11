@@ -48,8 +48,8 @@
           </ul>
           <div style="clear: both;"></div>
           <ul class="nav c_f">
-            <li><a href="index.html">品盛首页</a></li>
-            <li><a href="invest.html">我要投资</a></li>
+            <li><a href="?action=home.index">品盛首页</a></li>
+            <li><a href="?action=loan.index">我要投资</a></li>
             <li><a href="borrow.html">我要借款</a></li>
             <li><a href="guide.html">新手指南</a></li>
             <li><a href="about.html">关于品盛</a></li>
@@ -125,17 +125,20 @@
             <span class="tip-time" style="display:none;">距离标的下次更新时间：<em>07</em>时<em>15</em>分<em>22</em>秒</span>
           </dt>
           <dd>
+             <?php
+               foreach($loan_list as $loan){
+            ?>
             <ul>
               <li class="info">
                 <div class="fl bdi-class">
-                  <a href="" target="_self" class="class-logo-6"></a>
-                  <p>经营性贷款<br>1409251631</p>
+                  <a href="?action=investment.index" target="_self" class="class-logo-6"></a>
+                  <p><?php echo  $loan['loan_type'] ?><br><?php echo  $loan['id'] ?></p>
                 </div>
                 <div class="fr bdi-infoBox">
                   <div class="t-box s-c">
-                    <p class="a"><em>15</em>%<br><i>年化收益</i></p>
-                    <p class="b"><em>300,000</em>元<br><i>债权总额</i></p>
-                    <p class="c"><em>6</em>个月<br><i>借款期限</i></p>
+                    <p class="a"><em><?php echo  $loan['annual_rate'] ?></em>%<br><i>年化收益</i></p>
+                    <p class="b"><em><?php echo  $loan['amount'] ?></em>元<br><i>债权总额</i></p>
+                    <p class="c"><em><?php echo  $loan['deadline']/30 ?></em>个月<br><i>借款期限</i></p>
                     <p class="d"><span class="bdi-diyu-class class-logo-db-s"></span><i>抵押担保</i></p>
                   </div>
                   <div class="e-box">
@@ -149,6 +152,9 @@
                 </div>
               </li>
             </ul>
+           <?php
+            }
+            ?>  
           </dd>
         </dl>
       </div>
