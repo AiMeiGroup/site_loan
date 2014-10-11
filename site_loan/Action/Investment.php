@@ -11,7 +11,7 @@ namespace App\Action;
 
 use App\Api\LoanManage;
 
-class Home extends \Lavender\WebPage
+class Investment extends \Lavender\WebPage
 {
 
 	protected $without_auth_actions = array(
