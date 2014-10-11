@@ -43,7 +43,7 @@
         <h1 class="logo"></h1>
         <div class="hd-operate f_r">
           <ul class="user c_f">
-            <li><a class="login" href="login.html">登录</a></li>
+            <li><a class="login" href="?action=login.login">登录</a></li>
             <li><a class="register" href="register.html">注册</a></li>
           </ul>
           <div style="clear: both;"></div>
