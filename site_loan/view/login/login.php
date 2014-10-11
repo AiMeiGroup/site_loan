@@ -70,8 +70,8 @@ echo($LANG);
           </ul>
           <div style="clear: both;"></div>
           <ul class="nav c_f">
-            <li><a href="index.html">品盛首页</a></li>
-            <li><a href="invest.html">我要投资</a></li>
+            <li><a href="?action=home.index">品盛首页</a></li>
+            <li><a href="?action=loan.index">我要投资</a></li>
             <li><a href="">我要借款</a></li>
             <li><a href="">新手指南</a></li>
             <li><a href="">关于品盛</a></li>
