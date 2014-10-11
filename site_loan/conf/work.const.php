@@ -1,14 +1,6 @@
 <?php
-return array(
-	//global
-	'lang' => 'zh',
 
-	//global hash key,set in time begin use and can not modify it on used
-	'hash_key' => 'fj)(3ldfjLUuiro4io98I#Ji',
-    //bug分配权限
-	'bug_distribute' => array('81'),
-	'admin'=>array('1','9','260'),
+$common_conf['lang'] = 'zh';
+$common_conf['hash_key'] = 'fj)(3ldfjLUuiro4io98I#Ji';
 
-//    'task_status_changer'=>array('14','219'),
-);
-
+return $common_conf;

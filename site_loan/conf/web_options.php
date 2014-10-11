@@ -31,5 +31,7 @@ return array(
 		'index',
 		'login',
 		'home',
+		'investment',
+		'loan',
 	),
 );
