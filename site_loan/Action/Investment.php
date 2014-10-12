@@ -27,5 +27,43 @@ class Investment extends \Lavender\WebPage
 
 
 	}
+   
+   public function  detail_action()
+	{
+
+          
+        $loan_list=LoanManage::get_last_loans();
+	    return array('loan_list' =>$loan_list);
+
+
+	}
+
+	 /***
+		 * 我的投资
+		 * @return array
+		 */
+	 public function  invest_list_action()
+	{
+
+          
+        $loan_list=LoanManage::get_last_loans();
+	    return array('loan_list' =>$loan_list);
+
+
+	}
+
+     /***
+	 * 投资统计
+	 * @return array
+	 */
+	 public function  invest_sta_action()
+	{
+
+          
+        $loan_list=LoanManage::get_last_loans();
+	    return array('loan_list' =>$loan_list);
+
+
+	}
 
 }

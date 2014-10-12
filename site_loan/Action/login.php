@@ -15,7 +15,7 @@ use App\common\common;
 use Lavender\Exception;
 use Lavender\Session;
 
-class login extends \Lavender\WebPage
+class Login extends \Lavender\WebPage
 {
 
 	protected $without_auth_actions = array(
@@ -41,6 +41,7 @@ class login extends \Lavender\WebPage
 					$this->set_cookie(self::SESSION_KEY_NAME, $this->session->create($data[0]["id"], time()), time() + 60 * 60 * 24);
 					//将用户信息存入session
 					$this->session->offsetSet(L_USERINFO, $data[0]);
+					$this->session->offsetSet(‘info’, $data[0]);
 					common::ajax_success("登陆成功！");
 				} else {
 					common::ajax_error("用户名或密码错误！");

@@ -8,7 +8,7 @@ use Lavender\Filter;
 use App\Api\LoanManage;
 
 
-class Loan extends \Lavender\WebPage
+class Third extends \Lavender\WebPage
 {
 
 	protected $without_auth_actions = array(
@@ -20,7 +20,7 @@ class Loan extends \Lavender\WebPage
 	 * 列出全部的借款信息
 	 * @return array
 	 */
-	public function  index_action()
+	public function  third_party_action()
 	{
 
 /*        $params['size']=10;
@@ -31,37 +31,8 @@ class Loan extends \Lavender\WebPage
         return array('data'=>$data,'page'=>$show);*/
 	}
 
-	public function loan_action(){
+	public function third_intro_action(){
 		
-	}
-
-
-	 /***
-		 * 我的贷款
-		 * @return array
-		 */
-	 public function  loan_list_action()
-	{
-
-          
-        $loan_list=LoanManage::get_last_loans();
-	    return array('loan_list' =>$loan_list);
-
-
-	}
-
-     /***
-	 * 贷款统计
-	 * @return array
-	 */
-	 public function  loan_sta_action()
-	{
-
-          
-        $loan_list=LoanManage::get_last_loans();
-	    return array('loan_list' =>$loan_list);
-
-
 	}
 
 }
