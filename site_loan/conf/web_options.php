@@ -33,5 +33,8 @@ return array(
 		'home',
 		'investment',
 		'loan',
+		'member',
+		'third',
+		'bank'
 	),
 );
