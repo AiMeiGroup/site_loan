@@ -1,0 +1,46 @@
+﻿/*后台充值*/
+.h_Recommend{margin-top:4px;}
+#CZ_ConLabel{background-position:0 -100px;height:42px; background-repeat:repeat-x; border-bottom:#8AB4EC 1px solid; width:765px;}
+#CZ_ConLabel li{float:left;height:41px;width:130px;text-align:center; color:#111;line-height:41px;font-size:14px; margin-right:7px; border:#C6D5F9 1px solid; background:#EAF1FB; cursor:pointer; border-bottom:none}
+#CZ_ConLabel li.On{background-color:#F7F8FA;color:#1D5CB1;font-weight:bold; border:#8AB4EC 2px solid; border-bottom:none}
+
+/*后台充值*/
+.ChongZhi_XW{ width:765px;background:#F7F8FA; margin:0 auto;text-align:left;}
+.ChongZhi_Main{ width:745px; margin-top:0px; background:#F7F8FA;overflow:hidden;}
+.ChongZhi_Txt{ font-size:15px; color:#333333; padding:10px 0 0 22px;}
+.ChongZhi_Txt span{ color:#999999; padding-left:12px; font-size:12px;}
+.ChongZhi_Ka{ padding:22px 0 22px 22px;}
+.ChongZhi_Kuang{ }
+.ChongZhi_Kuang ul{}
+.ChongZhi_Kuang li{ margin:0 10px 10px 10px; display:inline; float:left;position:relative;}
+.ChongZhi_Kuang li div.b2b{background-image:url(/image/bank/b2b_ico.png);width:29px;height:16px;position:absolute;top:-10px;right:-10px;}
+.ChongZhi_Kuang li img{cursor:pointer;}
+.ChongZhi_XuanK{ float:left; padding-right:11px; padding-top:13px;}
+.ChongZhi_Line{ height:1px; width:745px; margin:15px 0 4px 0;}
+
+.ChongZhi_Qiye{ height:160px; width:745px; margin:0 auto;margin-top:40px;}
+.ChongZhi_An{width:116px; height:36px; background:#5894E4; font-size:16px; color:#FFF; font-weight:bold; text-align:center; display:block; line-height:36px; margin-right:10px; margin:0 0 0 22px; float:left;border:0;}
+
+.ChongZhi_Shuru{ width:745px; margin:0 auto; padding:10px 0 0 22px; float:left}
+.ShuRu_Mian{}
+.ShuRu_Mian ul{}
+.ShuRu_Mian li{font-size:14px; color:#333; padding-bottom:10px;}
+.ShuRu_Mian p{ line-height:26px; float:left}
+.ShuRu_Kuang{ width:160px; height:24px; background:#FFF; border:#ddd 1px solid; line-height:24px; padding-left:3px;}
+#txtRechargeAmount{text-align:left;}
+
+
+/*新充值区域Css*/
+.ChongZhi_Kuang{ width:740px; overflow:hidden; }
+.ChongZhi_Kuang img{ float:left; margin:6px 6px; border:2px solid #F7F8FA; cursor:pointer;}
+
+.ChongZhi_ShuruNew{ margin-top:15px; padding:10px 10px; width:743px; border:1px solid #EEE; text-align:left; line-height:2; background:#FCFCFC; color:#333; overflow:hidden;}
+.ChongZhi_ShuruNew .ZhangHao_XinXi{ width:700px; overflow:hidden;}
+.ChongZhi_ShuruNew .ZhangHao_XinXi li{ float:left; width:350px; text-align:left;}
+.ChongZhi_ShuruNew .ZhangHao_XinXi li label{ float:left; width:120px; text-align:right;}
+.ChongZhi_ShuruNew .ChongZhi_Xinxi{ margin-top:20px; padding:20px 0 0 20px; border-top:1px solid #EEE;}
+.ChongZhi_ShuruNew .ChongZhi_Xinxi p.btn{ margin:20px 0 0 0;}
+.ChongZhi_ShuruNew .ChongZhi_Xinxi p .FontRed{font-size:20px; color:#F00;}
+.ChongZhi_ShuruNew .FeiLu_ShuoMing{ margin:25px 0 0 0; padding:10px 20px; border:1px dashed #EEE; background:#FFF; overflow:hidden;}
+.ChongZhi_ShuruNew .FeiLu_ShuoMing .FontRed{ color:#F00;}
+.ChongZhi_ShuruNew .Tip{ margin:25px 0 0 0; padding:15px 20px; border-top:1px solid #EEE;}
